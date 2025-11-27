@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiwiMag Logistic - Servicii Complete de Livrare B2B & B2C</title>
+    <meta name="description" content="Servicii profesionale de livrare și transport cu tehnologie avansată. Livrare express în 25 minute, transport cu temperatură controlată, disponibilitate 24/7. Primele 10 curse GRATUITE!">
+    <meta name="keywords" content="livrare, curierat, transport, express, B2B, B2C, România, KiwiMag">
+    <meta name="author" content="KiwiMag Logistic">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="KiwiMag Logistic - Fiecare Pachet, Fiecare Promisiune - Livrată">
+    <meta property="og:description" content="Servicii complete de livrare B2B & B2C cu tehnologie avansată și standarde de siguranță superioare. Începe cu 10 curse GRATUITE!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kiwimag-logistic.com">
+    <meta property="og:image" content="https://kiwimag-logistic.com/images/og-image.jpg">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome pentru iconuri -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: 'hsl(142, 76%, 36%)',
+                            foreground: 'hsl(355.7, 100%, 97.3%)',
+                            glow: 'hsl(142, 76%, 45%)'
+                        },
+                        background: 'hsl(0, 0%, 100%)',
+                        foreground: 'hsl(222.2, 84%, 4.9%)',
+                        muted: {
+                            DEFAULT: 'hsl(210, 40%, 98%)',
+                            foreground: 'hsl(215.4, 16.3%, 46.9%)'
+                        },
+                        border: 'hsl(214.3, 31.8%, 91.4%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- EMBEDDED CSS STYLES -->
+    <style>
+        /* KiwiMag Logistic - Complete CSS Styles */
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Custom CSS Variables */
+        :root {
+            --primary: hsl(142, 76%, 36%);
+            --primary-glow: hsl(142, 76%, 45%);
+            --primary-dark: hsl(142, 76%, 30%);
+            --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-glow));
+            --gradient-hero: linear-gradient(135deg, hsl(142, 76%, 36%) 0%, hsl(142, 76%, 45%) 100%);
+            --shadow-elegant: 0 10px 30px -10px rgba(34, 139, 34, 0.2);
+            --shadow-glow: 0 0 40px rgba(34, 139, 34, 0.3);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --border-radius: 0.5rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 4rem;
+            }
+        }
+
+        /* Custom Animations */
+        @keyframes float {
+            0%, 100% { 
+                transform: translateY(0px); 
+            }
+            50% { 
+                transform: translateY(-10px); 
+            }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(34, 139, 34, 0.3); 
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(34, 139, 34, 0.6); 
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Animation Classes */
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .animate-slide-left {
+            animation: slideInLeft 0.6s ease-out forwards;
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: var(--primary); /* Fallback */
+        }
+
+        /* Hero Section */
+        .hero-gradient {
+            background: var(--gradient-hero);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            pointer-events: none;
+        }
+
+        /* Card Hover Effects */
+        .card-hover {
+            transition: var(--transition-smooth);
+            cursor: pointer;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-elegant);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            transition: var(--transition-smooth);
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: var(--transition-smooth);
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-glow);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-elegant);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            padding: 0.75rem 2rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: var(--transition-smooth);
+            border: 2px solid var(--primary);
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Header Styles */
+        header {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: var(--transition-smooth);
+        }
+
+        header.scrolled {
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            transition: var(--transition-smooth);
+        }
+
+        .mobile-menu.hidden {
+            display: none;
+        }
+
+        .mobile-menu-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Navigation */
+        nav a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Section Spacing */
+        section {
+            position: relative;
+        }
+
+        /* Typography */
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 4rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 2.5rem !important;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.125rem !important;
+            }
+            
+            .section-title {
+                font-size: 2rem !important;
+            }
+        }
+
+        /* Loading Animation */
+        .image-loading {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Focus Styles */
+        button:focus,
+        a:focus {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        /* Backdrop Blur */
+        .backdrop-blur {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        /* Notification Styles */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            max-width: 400px;
+        }
+
+        .notification-success {
+            background: #10b981;
+            color: white;
+        }
+
+        .notification-error {
+            background: #ef4444;
+            color: white;
+        }
+
+        .notification-info {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .notification-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .notification-close {
+            background: none;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+            padding: 0.25rem;
+            margin-left: 1rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            
+            .hero-gradient {
+                background: white !important;
+                color: black !important;
+            }
+            
+            .whatsapp-btn {
+                background: var(--primary) !important;
+            }
+            
+            .card-hover:hover {
+                transform: none !important;
+                box-shadow: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-foreground">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur">
+        <div class="container mx-auto px-4 flex h-16 items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                    <i class="fas fa-truck text-white text-sm"></i>
+                </div>
+                <span class="text-xl font-bold gradient-text">KiwiMag Logistic</span>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#servicii" class="text-sm font-medium hover:text-primary transition-colors">Servicii</a>
+                <a href="#tehnologie" class="text-sm font-medium hover:text-primary transition-colors">Tehnologie</a>
+                <a href="#preturi" class="text-sm font-medium hover:text-primary transition-colors">Prețuri</a>
+                <a href="#industrii" class="text-sm font-medium hover:text-primary transition-colors">Industrii</a>
+                <a href="#contact" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden mobile-menu-button p-2">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+
+            <button class="hidden md:block whatsapp-btn text-white border-0 px-4 py-2 rounded-md font-medium" onclick="openWhatsApp()">
+                <i class="fab fa-whatsapp mr-2"></i>
+                WhatsApp
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t">
+            <nav class="container mx-auto px-4 py-4 space-y-2">
+                <a href="#servicii" class="block py-2 text-sm font-medium hover:text-primary transition-colors">Servicii</a>
+                <a href="#tehnologie" class="block py-2 text-sm font-medium hover:text-primary transition-colors">Tehnologie</a>
+                <a href="#preturi" class="block py-2 text-sm font-medium hover:text-primary transition-colors">Prețuri</a>
+                <a href="#industrii" class="block py-2 text-sm font-medium hover:text-primary transition-colors">Industrii</a>
+                <a href="#contact" class="block py-2 text-sm font-medium hover:text-primary transition-colors">Contact</a>
+                <button class="w-full mt-4 whatsapp-btn text-white border-0 px-4 py-2 rounded-md font-medium" onclick="openWhatsApp()">
+                    <i class="fab fa-whatsapp mr-2"></i>
+                    WhatsApp
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="hero-title text-5xl md:text-6xl font-bold mb-6">
+                    Fiecare Pachet, Fiecare Promisiune - Livrată
+                </h1>
+                <p class="hero-subtitle text-xl md:text-2xl mb-8 text-white/90">
+                    Servicii complete de livrare B2B & B2C cu tehnologie avansată și standarde de siguranță superioare
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <button class="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 rounded-md font-medium transition-all duration-300 transform hover:scale-105" onclick="openWhatsAppOrder()">
+                        <i class="fas fa-gift mr-2"></i>
+                        10 Curse GRATUITE
+                    </button>
+                    <button class="border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6 rounded-md font-medium transition-all duration-300">
+                        <i class="fas fa-phone mr-2"></i>
+                        Solicită Ofertă
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="bg-white/10 backdrop-blur rounded-lg p-6 card-hover">
+                        <i class="fas fa-clock text-4xl mb-3"></i>
+                        <h3 class="font-semibold mb-2">Livrare Express</h3>
+                        <p class="text-sm text-white/80">Până la 25 minute</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-lg p-6 card-hover">
+                        <i class="fas fa-shield-alt text-4xl mb-3"></i>
+                        <h3 class="font-semibold mb-2">Disponibilitate 24/7</h3>
+                        <p class="text-sm text-white/80">Weekend-uri și sărbători</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-lg p-6 card-hover">
+                        <i class="fas fa-thermometer-half text-4xl mb-3"></i>
+                        <h3 class="font-semibold mb-2">Transport Controlat</h3>
+                        <p class="text-sm text-white/80">Monitorizare în timp real</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicii Section -->
+    <section id="servicii" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-4xl font-bold mb-4">Serviciile Noastre Complete</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Soluții de transport specializate pentru toate nevoile dumneavoastră de livrare
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                <!-- Transport Specializat -->
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-truck text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold">Transport Specializat</h3>
+                            <p class="text-gray-600">Livrări B2B & B2C profesionale</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-primary mt-1"></i>
+                            <div>
+                                <p class="font-medium">Livrare Standard</p>
+                                <p class="text-sm text-gray-600">Livrări programate sau în intervale orare stabilite</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-bolt text-primary mt-1"></i>
+                            <div>
+                                <p class="font-medium">Livrare Express</p>
+                                <p class="text-sm text-gray-600">Până la 25 minute pentru nevoi urgente</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-thermometer-half text-primary mt-1"></i>
+                            <div>
+                                <p class="font-medium">Transport cu Temperatură Controlată</p>
+                                <p class="text-sm text-gray-600">Monitorizare în timp real cu alerte imediate</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-box text-primary mt-1"></i>
+                            <div>
+                                <p class="font-medium">Transport Agabaritic</p>
+                                <p class="text-sm text-gray-600">Manipularea și livrarea produselor voluminoase</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-primary/5 p-4 rounded-lg mt-6">
+                        <p class="text-sm"><strong>Acoperire:</strong> Națională pentru o accesibilitate largă</p>
+                        <p class="text-sm"><strong>Disponibilitate:</strong> 24/7, incluzând weekend-urile și sărbătorile</p>
+                    </div>
+                </div>
+
+                <!-- Șofer la Dispoziție -->
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-users text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold">Șofer la Dispoziție</h3>
+                            <p class="text-gray-600">Soluții personalizate și flexibile</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-clock text-primary mt-1"></i>
+                            <div>
+                                <p class="font-medium">Rată Orară Flexibilă</p>
+                                <p class="text-sm text-gray-600">Minimum 2 ore, garantăm profesionalism</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-star text-primary mt-1"></i>
+                            <div>
+                                <p class="font-medium">Prezență Dedicată</p>
+                                <p class="text-sm text-gray-600">Ideală pentru evenimente corporative sau transport VIP</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                            <div>
+                                <p class="font-medium">Transferuri Aeroport</p>
+                                <p class="text-sm text-gray-600">Servicii de concierge pentru transport internațional</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-primary/5 p-4 rounded-lg mt-6">
+                        <p class="text-sm font-medium text-primary">
+                            Serviciu caracterizat prin profesionalism garantat și prezență dedicată
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tehnologie Section -->
+    <section id="tehnologie" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-4xl font-bold mb-4">Platformă Tehnologică Avansată</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Tehnologie de ultimă generație pentru monitorizare și comunicare optimă
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-whatsapp text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">WhatsApp Business</h3>
+                    <p class="text-sm text-gray-600">Comunicare instantanee și eficiență</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Ofițer de Cont Dedicat</h3>
+                    <p class="text-sm text-gray-600">Disponibil 24/7 pentru suport</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bolt text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Integrare Aplicații</h3>
+                    <p class="text-sm text-gray-600">Mobile și desktop sincronizate</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-award text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Urmărire Performanțe</h3>
+                    <p class="text-sm text-gray-600">Monitorizare reală a curierilor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Siguranță Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-4xl font-bold mb-4">Standarde de Siguranță și Conformitate</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Respectăm cele mai înalte standarde naționale și europene pentru siguranță și calitate
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                    <div class="inline-block border border-primary text-primary px-4 py-2 rounded-full text-lg font-semibold mb-4">GDP</div>
+                    <h3 class="font-semibold mb-2">Good Distribution Practice</h3>
+                    <p class="text-sm text-gray-600">Standarde pentru distribuția produselor farmaceutice</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                    <div class="inline-block border border-primary text-primary px-4 py-2 rounded-full text-lg font-semibold mb-4">DSVS</div>
+                    <h3 class="font-semibold mb-2">Sanitary-Veterinary</h3>
+                    <p class="text-sm text-gray-600">Norme pentru siguranța alimentelor</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                    <div class="inline-block border border-primary text-primary px-4 py-2 rounded-full text-lg font-semibold mb-4">HACCP</div>
+                    <h3 class="font-semibold mb-2">Hazard Analysis</h3>
+                    <p class="text-sm text-gray-600">Analiza riscurilor și puncte critice</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                    <div class="inline-block border border-primary text-primary px-4 py-2 rounded-full text-lg font-semibold mb-4">DGS</div>
+                    <h3 class="font-semibold mb-2">Dangerous Goods Safety</h3>
+                    <p class="text-sm text-gray-600">Siguranță pentru mărfuri periculoase</p>
+                </div>
+            </div>
+
+            <!-- Transport cu Control de Temperatură -->
+            <div class="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <div class="flex items-center justify-center space-x-3 mb-4">
+                        <i class="fas fa-thermometer-half text-primary text-3xl"></i>
+                        <h3 class="text-2xl font-bold">Transport cu Control de Temperatură</h3>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-primary text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Monitorizare în Timp Real</h4>
+                        <p class="text-sm text-gray-600">Sistem de urmărire cu alerte imediate</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-box text-primary text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Containere Specializate</h4>
+                        <p class="text-sm text-gray-600">Conform standardelor pentru produse farmaceutice</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-award text-primary text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Produse Monitorizate</h4>
+                        <p class="text-sm text-gray-600">Perfect pentru mostre medicale și produse sensibile</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prețuri Section -->
+    <section id="preturi" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-4xl font-bold mb-4">Structura Noastră de Prețuri</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Transparență totală - prețuri fixe și clare pentru fiecare serviciu, fără costuri suplimentare
+                </p>
+            </div>
+
+            <!-- Servicii de bază -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                    <div class="text-3xl font-bold text-primary mb-2">14 RON</div>
+                    <h3 class="font-semibold mb-2">Livrare Standard</h3>
+                    <p class="text-sm text-gray-600">Intervale orare stabilite</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                    <div class="text-3xl font-bold text-primary mb-2">17 RON</div>
+                    <h3 class="font-semibold mb-2">Livrare Express</h3>
+                    <p class="text-sm text-gray-600">Livrare în sub 30 min</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                    <div class="text-3xl font-bold text-primary mb-2">45 RON/oră</div>
+                    <h3 class="font-semibold mb-2">Șofer la Dispoziție</h3>
+                    <p class="text-sm text-gray-600">Rată orară flexibilă</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                    <div class="text-3xl font-bold text-primary mb-2">95 RON</div>
+                    <h3 class="font-semibold mb-2">Transfer Aeroport</h3>
+                    <p class="text-sm text-gray-600">Servicii de concierge</p>
+                </div>
+            </div>
+
+            <!-- Pachete -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <div class="bg-white rounded-lg shadow-lg p-6 border-2 border-primary/20 card-hover">
+                    <div class="text-center mb-6">
+                        <div class="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">PACHET START</div>
+                        <div class="text-4xl font-bold text-primary mb-2">1000 RON</div>
+                        <p class="text-gray-600">54 livrări incluse - Cost redus per livrare</p>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span class="text-sm">54 livrări incluse</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span class="text-sm">Cost redus per livrare</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span class="text-sm">Perfect pentru companii cu nevoi regulate</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 border-2 border-primary card-hover">
+                    <div class="text-center mb-6">
+                        <div class="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">PACHET PREMIUM</div>
+                        <div class="text-4xl font-bold text-primary mb-2">2000 RON</div>
+                        <p class="text-gray-600">125 livrări incluse - Cel mai bun cost per livrare</p>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span class="text-sm">125 livrări incluse</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span class="text-sm">Cel mai bun cost per livrare</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span class="text-sm">Prioritate la alocarea curierilor</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span class="text-sm">Management dedicat</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span class="text-sm">Ideal pentru companii cu nevoi elevate</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Oferte de lansare -->
+            <div class="bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-8">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold mb-4">Oferte de Lansare & Promoții</h3>
+                    <p class="text-lg text-gray-600">Profită de ofertele noastre speciale pentru parteneri noi!</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                        <i class="fas fa-gift text-primary text-4xl mb-4"></i>
+                        <h4 class="font-semibold mb-2">10 Curse GRATUITE</h4>
+                        <p class="text-sm text-gray-600">Pentru parteneri noi - testează calitatea serviciului</p>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                        <i class="fas fa-dollar-sign text-primary text-4xl mb-4"></i>
+                        <h4 class="font-semibold mb-2">Doar 10 RON</h4>
+                        <p class="text-sm text-gray-600">Pentru primele 20 livrări - ofertă de lansare</p>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                        <div class="inline-block border border-primary text-primary px-3 py-1 rounded text-sm font-semibold mb-4">TEST</div>
+                        <h4 class="font-semibold mb-2">Pachet de Test</h4>
+                        <p class="text-sm text-gray-600">3 servicii la preț redus - 50% reducere</p>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                        <div class="inline-block border border-primary text-primary px-3 py-1 rounded text-sm font-semibold mb-4">VIP</div>
+                        <h4 class="font-semibold mb-2">Pachet VIP</h4>
+                        <p class="text-sm text-gray-600">20 livrări GRATUITE pentru pachete PREMIUM/START</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <p class="text-sm text-gray-600">
+                    * Prețurile sunt exprimate în RON și nu includ TVA. Pot fi influențate de distanță și condiții speciale.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industrii Section -->
+    <section id="industrii" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-4xl font-bold mb-4">Industrii Servite</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Soluții specializate pentru diverse sectoare de activitate
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-2xl">🌸</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Florării</h3>
+                    <p class="text-sm text-gray-600">
+                        Livrări rapide pentru aranjamente florale, păstrând frumusețea și starea inițială.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-2xl">⚖️</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Cabinete de Avocatură</h3>
+                    <p class="text-sm text-gray-600">
+                        Ridicarea și livrarea documentelor confidențiale, asigurând integritatea acestora.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-2xl">🏥</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Clinici Medicale</h3>
+                    <p class="text-sm text-gray-600">
+                        Livrări de documente, mostre medicale cu respectarea condițiilor de igienă.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-2xl">🍽️</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Restaurante</h3>
+                    <p class="text-sm text-gray-600">
+                        Transport eficient pentru comenzi de mâncare, asigurând cel mai mic timp de livrare.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-2xl">🛒</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Magazine Online</h3>
+                    <p class="text-sm text-gray-600">
+                        Soluții flexibile pentru livrarea produselor către clienți finali.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-2xl">🔧</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Service-uri Auto</h3>
+                    <p class="text-sm text-gray-600">
+                        Transportul pieselor și componentelor auto, optimizat pentru timp și eficiență.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-4xl font-bold mb-4">Mereu la Dispoziție!</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Suntem gata să devenim partenerul dumneavoastră de încredere pentru toate nevoile de livrare
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                    <div class="w-16 h-16 whatsapp-btn rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-whatsapp text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">WhatsApp Business</h3>
+                    <p class="text-lg font-medium text-primary mb-4">+40 741 699 028</p>
+                    <button class="whatsapp-btn text-white px-6 py-2 rounded-md font-medium" onclick="openWhatsApp()">
+                        Scrie-ne pe WhatsApp
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-envelope text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">E-mail</h3>
+                    <p class="text-lg font-medium text-primary mb-4">office@kiwimag.logistic.com</p>
+                    <button class="btn-outline" onclick="openEmail()">
+                        Trimite-ne un e-mail
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Solicită o Întâlnire</h3>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Contactați-ne pentru a discuta cum vă putem optimiza operațiunile
+                    </p>
+                    <button class="btn-outline">
+                        Programează Întâlnire
+                    </button>
+                </div>
+            </div>
+
+            <!-- CTA Final -->
+            <div class="bg-gradient-to-r from-primary to-primary rounded-2xl p-8 text-white text-center">
+                <h3 class="text-3xl font-bold mb-4">Începe cu 10 Curse GRATUITE!</h3>
+                <p class="text-xl mb-6 text-white/90">
+                    Testează calitatea serviciilor noastre fără niciun cost
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 rounded-md font-medium transition-all duration-300 transform hover:scale-105" onclick="openWhatsAppOrder()">
+                        <i class="fas fa-gift mr-2"></i>
+                        Solicită Livrare Acum
+                    </button>
+                    <button class="border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6 rounded-md font-medium transition-all duration-300">
+                        <i class="fas fa-phone mr-2"></i>
+                        Solicită Ofertă Personalizată
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                        <i class="fas fa-truck text-white text-sm"></i>
+                    </div>
+                    <span class="text-xl font-bold gradient-text">KiwiMag Logistic</span>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-sm text-gray-600 mb-2">
+                        Fiecare Pachet, Fiecare Promisiune - Livrată
+                    </p>
+                    <p class="text-xs text-gray-500">
+                        © 2024 KiwiMag Logistic. Toate drepturile rezervate.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EMBEDDED JAVASCRIPT -->
+    <script>
+        // KiwiMag Logistic - Complete JavaScript Functionality
+
+        // Configuration
+        const CONFIG = {
+            whatsappNumber: '40741699028',
+            email: 'office@kiwimag.logistic.com',
+            companyName: 'KiwiMag Logistic'
+        };
+
+        // WhatsApp Functions
+        function openWhatsApp() {
+            const message = encodeURIComponent("Bună ziua! Oferta dumneavoastră prezintă interes. Care sunt următorii pași?");
+            const whatsappUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+            trackEvent('whatsapp_click', { type: 'header_button' });
+        }
+
+        function openWhatsAppOrder() {
+            const message = encodeURIComponent("Bună ziua! Dorim să testăm serviciul Dvs. Cum putem comanda o cursă?");
+            const whatsappUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+            trackEvent('whatsapp_click', { type: 'order_button' });
+        }
+
+        // Email Function
+        function openEmail() {
+            const subject = encodeURIComponent(`Solicitare informații servicii ${CONFIG.companyName}`);
+            const body = encodeURIComponent(`Bună ziua,
+
+Sunt interesat de serviciile dumneavoastră de livrare și transport. Vă rog să îmi oferiți mai multe detalii despre:
+
+- Serviciile disponibile în zona mea
+- Prețurile și pachetele oferite
+- Modalitățile de colaborare
+
+Mulțumesc!
+
+Cu stimă`);
+            
+            const mailtoUrl = `mailto:${CONFIG.email}?subject=${subject}&body=${body}`;
+            window.location.href = mailtoUrl;
+            trackEvent('email_click');
+        }
+
+        // Utility Functions
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        function throttle(func, limit) {
+            let inThrottle;
+            return function() {
+                const args = arguments;
+                const context = this;
+                if (!inThrottle) {
+                    func.apply(context, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            }
+        }
+
+        // Analytics and Tracking
+        function trackEvent(eventName, eventData = {}) {
+            // Google Analytics 4
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                    ...eventData,
+                    page_location: window.location.href,
+                    page_title: document.title
+                });
+            }
+            
+            // Facebook Pixel
+            if (typeof fbq !== 'undefined') {
+                fbq('track', eventName, eventData);
+            }
+            
+            // Custom Analytics
+            console.log('Event tracked:', eventName, eventData);
+        }
+
+        // Smooth Scrolling
+        function initSmoothScrolling() {
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        const header = document.querySelector('header');
+                        const headerHeight = header ? header.offsetHeight : 0;
+                        const targetPosition = targetSection.offsetTop - headerHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        const mobileMenu = document.querySelector('.mobile-menu');
+                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                        
+                        trackEvent('navigation_click', { target: targetId });
+                    }
+                });
+            });
+        }
+
+        // Header Scroll Effects
+        function initHeaderEffects() {
+            const header = document.querySelector('header');
+            if (!header) return;
+            
+            let lastScrollTop = 0;
+            let ticking = false;
+            
+            const updateHeader = () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                lastScrollTop = scrollTop;
+                ticking = false;
+            };
+            
+            const requestTick = () => {
+                if (!ticking) {
+                    requestAnimationFrame(updateHeader);
+                    ticking = true;
+                }
+            };
+            
+            window.addEventListener('scroll', requestTick);
+        }
+
+        // Mobile Menu
+        function initMobileMenu() {
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    
+                    // Update button icon
+                    const icon = this.querySelector('i');
+                    if (icon) {
+                        if (mobileMenu.classList.contains('hidden')) {
+                            icon.className = 'fas fa-bars text-xl';
+                        } else {
+                            icon.className = 'fas fa-times text-xl';
+                        }
+                    }
+                    
+                    trackEvent('mobile_menu_toggle', { 
+                        action: mobileMenu.classList.contains('hidden') ? 'close' : 'open' 
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.className = 'fas fa-bars text-xl';
+                        }
+                    }
+                });
+            }
+        }
+
+        // Intersection Observer for Animations
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        
+                        // Track section views
+                        const sectionId = entry.target.id;
+                        if (sectionId) {
+                            trackEvent('section_view', { section: sectionId });
+                        }
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe sections and cards
+            const animatedElements = document.querySelectorAll('.card-hover, section[id]');
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Lazy Loading for Images
+        function initLazyLoading() {
+            const images = document.querySelectorAll('img[data-src]');
+            
+            if (images.length === 0) return;
+            
+            const imageObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('image-loading');
+                        img.classList.add('loaded');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            images.forEach(img => {
+                img.classList.add('image-loading');
+                imageObserver.observe(img);
+            });
+        }
+
+        // Notifications
+        function showNotification(message, type = 'info', duration = 5000) {
+            // Remove existing notifications
+            const existingNotifications = document.querySelectorAll('.notification');
+            existingNotifications.forEach(n => n.remove());
+            
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <span class="notification-message">${message}</span>
+                    <button class="notification-close" onclick="this.parentElement.parentElement.remove()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            `;
+            
+            // Add to page
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Auto remove
+            if (duration > 0) {
+                setTimeout(() => {
+                    notification.style.transform = 'translateX(100%)';
+                    setTimeout(() => {
+                        if (notification.parentElement) {
+                            notification.remove();
+                        }
+                    }, 300);
+                }, duration);
+            }
+        }
+
+        // Performance Monitoring
+        function initPerformanceMonitoring() {
+            // Page Load Time
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    const perfData = performance.timing;
+                    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+                    
+                    trackEvent('page_performance', {
+                        load_time: pageLoadTime,
+                        dom_ready: perfData.domContentLoadedEventEnd - perfData.navigationStart
+                    });
+                }, 0);
+            });
+            
+            // Page Visibility
+            document.addEventListener('visibilitychange', function() {
+                trackEvent('page_visibility', {
+                    hidden: document.hidden,
+                    visibility_state: document.visibilityState
+                });
+            });
+        }
+
+        // Error Handling
+        function initErrorHandling() {
+            window.addEventListener('error', function(e) {
+                trackEvent('javascript_error', {
+                    message: e.message,
+                    filename: e.filename,
+                    line: e.lineno,
+                    column: e.colno
+                });
+                
+                console.error('JavaScript error:', e);
+            });
+        }
+
+        // Keyboard Navigation
+        function initKeyboardNavigation() {
+            document.addEventListener('keydown', function(e) {
+                // ESC key closes mobile menu
+                if (e.key === 'Escape') {
+                    const mobileMenu = document.querySelector('.mobile-menu');
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        const menuButton = document.querySelector('.mobile-menu-button');
+                        if (menuButton) {
+                            const icon = menuButton.querySelector('i');
+                            if (icon) {
+                                icon.className = 'fas fa-bars text-xl';
+                            }
+                        }
+                    }
+                }
+                
+                // Enter key on buttons
+                if (e.key === 'Enter' && e.target.tagName === 'BUTTON') {
+                    e.target.click();
+                }
+            });
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('KiwiMag Logistic website initialized');
+            
+            // Initialize all modules
+            initSmoothScrolling();
+            initHeaderEffects();
+            initMobileMenu();
+            initScrollAnimations();
+            initLazyLoading();
+            initPerformanceMonitoring();
+            initErrorHandling();
+            initKeyboardNavigation();
+            
+            // Track page view
+            trackEvent('page_view', {
+                page_title: document.title,
+                page_location: window.location.href,
+                referrer: document.referrer
+            });
+            
+            // Add loading complete class
+            document.body.classList.add('loaded');
+            
+            console.log('All modules initialized successfully');
+        });
+
+        // Export functions for global access
+        window.KiwiMagLogistic = {
+            openWhatsApp,
+            openWhatsAppOrder,
+            openEmail,
+            trackEvent,
+            showNotification
+        };
+    </script>
+</body>
+</html>
