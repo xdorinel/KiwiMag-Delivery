@@ -1,1452 +1,1185 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <title>KiwiMag Delivery - Servicii Complete de Livrare B2B & B2C</title>
-    <meta name="description" content="Servicii profesionale de livrare și transport cu tehnologie avansată. Livrare express în 25 minute, transport cu temperatură controlată, disponibilitate 24/7. Primele 10 curse GRATUITE!">
-    <meta name="keywords" content="livrare, curierat, transport, express, B2B, B2C, România, KiwiMag">
-    <meta name="author" content="KiwiMag Delivery">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="KiwiMag Delivery - Fiecare Pachet, Fiecare Promisiune - Livrată">
-    <meta property="og:description" content="Servicii complete de livrare B2B & B2C cu tehnologie avansată și standarde de siguranță superioare. Începe cu 10 curse GRATUITE!">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kiwimag-delivery.com">
-    <meta property="og:image" content="https://kiwimag-delivery.com/images/og-image.jpg">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome pentru iconuri -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            DEFAULT: 'hsl(142, 76%, 36%)',
-                            foreground: 'hsl(355.7, 100%, 97.3%)',
-                            glow: 'hsl(142, 76%, 45%)'
-                        },
-                        background: 'hsl(0, 0%, 100%)',
-                        foreground: 'hsl(222.2, 84%, 4.9%)',
-                        muted: {
-                            DEFAULT: 'hsl(210, 40%, 98%)',
-                            foreground: 'hsl(215.4, 16.3%, 46.9%)'
-                        },
-                        border: 'hsl(214.3, 31.8%, 91.4%)',
-                    }
-                }
-            }
-        }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiwi Mag Delivery — Servicii Complete de Livrare B2B</title>
+  <meta name="description" content="KiwiMag Delivery oferă servicii complete de livrare B2B cu angajați proprii, livrare în 35 minute, disponibilitate 24/7 și transport cu temperatură controlată. Acoperire națională România + Bulgaria." />
+  <meta name="keywords" content="curierat expres B2B, livrare 35 minute, transport farmaceutic, curierat 24/7, KiwiMag Delivery, curierat București, livrare Bulgaria" />
 
-    <!-- EMBEDDED CSS STYLES -->
-    <style>
-        /* KiwiMag Delivery - Complete CSS Styles */
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
 
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-        html {
-            scroll-behavior: smooth;
-        }
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>(function(){ emailjs.init({ publicKey: "L8K2u23-pC_2IN2gq" }); })();</script>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ["'Cormorant Garamond'", "serif"],
+            sans: ["'DM Sans'", "sans-serif"],
+          }
         }
+      }
+    }
+  </script>
 
-        /* Custom CSS Variables */
-        :root {
-            --primary: hsl(142, 76%, 36%);
-            --primary-glow: hsl(142, 76%, 45%);
-            --primary-dark: hsl(142, 76%, 30%);
-            --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-glow));
-            --gradient-hero: linear-gradient(135deg, hsl(142, 76%, 36%) 0%, hsl(142, 76%, 45%) 100%);
-            --shadow-elegant: 0 10px 30px -10px rgba(34, 139, 34, 0.2);
-            --shadow-glow: 0 0 40px rgba(34, 139, 34, 0.3);
-            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --border-radius: 0.5rem;
-        }
+  <style>
+    :root {
+      --green-darkest: #0f2d1a;
+      --green-dark: #14532d;
+      --green-mid: #166534;
+      --green-base: #16a34a;
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --cream: #f9f6f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: #1a2e1f; -webkit-font-smoothing: antialiased; }
+    h1,h2,h3 { font-family: 'Cormorant Garamond', serif; }
 
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
+    /* Navbar */
+    #navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; transition: all 0.5s; }
+    #navbar.scrolled { background: #14532d; box-shadow: 0 2px 40px rgba(20,83,45,0.5); }
+    #navbar.top { background: transparent; }
+    .nav-inner { max-width: 1320px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 80px; }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; cursor: pointer; }
+    .nav-logo img { width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(201,168,76,0.6); object-fit: contain; mix-blend-mode: multiply; }
+    .nav-logo-text { display: flex; flex-direction: column; }
+    .nav-logo-name { color: white; font-weight: 600; letter-spacing: 0.18em; font-size: 0.8rem; text-transform: uppercase; font-family: 'DM Sans', sans-serif; }
+    .nav-logo-sub { color: var(--gold); font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; font-family: 'DM Sans', sans-serif; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; font-family: 'DM Sans', sans-serif; transition: color 0.3s; cursor: pointer; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-right { display: flex; align-items: center; gap: 12px; }
+    .btn-gold { background: var(--gold); color: #14532d; padding: 0.75rem 1.75rem; font-family: 'DM Sans', sans-serif; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.75rem; border: none; cursor: pointer; transition: all 0.3s; border-radius: 2px; }
+    .btn-gold:hover { background: var(--gold-light); box-shadow: 0 4px 20px rgba(201,168,76,0.4); }
+    .btn-outline { background: transparent; color: rgba(255,255,255,0.9); border: 1px solid var(--gold); padding: 0.75rem 1.75rem; font-family: 'DM Sans', sans-serif; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.75rem; cursor: pointer; transition: all 0.3s; border-radius: 2px; }
+    .btn-outline:hover { background: rgba(201,168,76,0.15); }
+    .btn-primary-green { background: #166534; color: var(--cream); border: 1px solid #166534; padding: 0.875rem 2rem; font-family: 'DM Sans', sans-serif; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.75rem; cursor: pointer; transition: all 0.3s; border-radius: 2px; }
+    .btn-primary-green:hover { background: #14532d; border-color: var(--gold); }
 
-        @media (min-width: 640px) {
-            .container {
-                padding: 0 2rem;
-            }
-        }
+    /* Lang switcher */
+    .lang-btn { background: transparent; color: rgba(255,255,255,0.7); border: 1px solid rgba(201,168,76,0.3); padding: 0.4rem 0.75rem; font-family: 'DM Sans', sans-serif; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; border-radius: 2px; transition: all 0.3s; }
+    .lang-btn:hover { color: var(--gold); border-color: rgba(201,168,76,0.7); }
+    .lang-dropdown { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #14532d; border: 1px solid rgba(201,168,76,0.3); min-width: 80px; border-radius: 2px; display: none; z-index: 200; }
+    .lang-dropdown.open { display: block; }
+    .lang-option { display: block; width: 100%; text-align: left; padding: 0.5rem 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.6); background: transparent; border: none; cursor: pointer; transition: all 0.2s; }
+    .lang-option:hover, .lang-option.active { color: var(--gold); background: rgba(201,168,76,0.08); }
 
-        @media (min-width: 1024px) {
-            .container {
-                padding: 0 4rem;
-            }
-        }
+    /* Mobile menu */
+    .hamburger { display: none; background: transparent; border: none; cursor: pointer; padding: 8px; }
+    .hamburger span { display: block; width: 24px; height: 1px; background: white; margin: 5px 0; transition: all 0.3s; }
+    .mobile-menu { display: none; background: #14532d; border-top: 1px solid rgba(201,168,76,0.2); padding: 1.5rem 2rem; flex-direction: column; gap: 1rem; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-family: 'DM Sans', sans-serif; cursor: pointer; }
 
-        /* Custom Animations */
-        @keyframes float {
-            0%, 100% { 
-                transform: translateY(0px); 
-            }
-            50% { 
-                transform: translateY(-10px); 
-            }
-        }
+    /* Reveal animation */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
 
-        @keyframes pulse-glow {
-            0%, 100% { 
-                box-shadow: 0 0 20px rgba(34, 139, 34, 0.3); 
-            }
-            50% { 
-                box-shadow: 0 0 40px rgba(34, 139, 34, 0.6); 
-            }
-        }
+    /* Gold line */
+    .gold-line { height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+    .gold-label { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .gold-label-line { height: 1px; width: 40px; background: var(--gold); }
+    .gold-label span { color: var(--gold); font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; font-family: 'DM Sans', sans-serif; }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    /* Cards */
+    .card-premium { background: white; border: 1px solid #d1e7d9; box-shadow: 0 4px 24px rgba(20,83,45,0.08); transition: all 0.3s; border-radius: 2px; }
+    .card-premium:hover { box-shadow: 0 8px 40px rgba(20,83,45,0.16); transform: translateY(-2px); }
 
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
+    /* Sections */
+    .section-dark { background: #0f2d1a; color: #f3f9f5; }
+    .section-mid { background: #14532d; color: #f3f9f5; }
+    .section-cream { background: var(--cream); }
+    .section-white { background: white; }
 
-        /* Animation Classes */
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
+    /* Stat counter */
+    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 600; color: white; }
+    .stat-label { color: rgba(255,255,255,0.6); font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; font-family: 'DM Sans', sans-serif; }
 
-        .animate-pulse-glow {
-            animation: pulse-glow 2s ease-in-out infinite;
-        }
+    /* Pricing cards */
+    .pricing-card { border-radius: 2px; padding: 2.5rem; }
+    .pricing-card.featured { background: #14532d; color: white; }
+    .pricing-card.standard { background: white; border: 1px solid #d1e7d9; }
 
-        .animate-in {
-            animation: fadeInUp 0.6s ease-out forwards;
-        }
+    /* Testimonial cards */
+    .testimonial-card { padding: 2rem; border-radius: 2px; min-height: 240px; display: flex; flex-direction: column; justify-content: space-between; }
+    .testimonial-card.center { background: var(--gold); }
+    .testimonial-card.side { background: #1a3d26; }
 
-        .animate-slide-left {
-            animation: slideInLeft 0.6s ease-out forwards;
-        }
+    /* Modal */
+    .modal-overlay { position: fixed; inset: 0; z-index: 200; display: none; align-items: center; justify-content: center; padding: 1rem; }
+    .modal-overlay.open { display: flex; }
+    .modal-bg { position: absolute; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); }
+    .modal-box { position: relative; background: white; width: 100%; max-width: 680px; max-height: 90vh; overflow-y: auto; border-radius: 2px; box-shadow: 0 25px 80px rgba(0,0,0,0.4); }
+    .modal-header { background: #0f2d1a; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .modal-close { background: transparent; border: none; color: rgba(255,255,255,0.5); cursor: pointer; font-size: 1.5rem; line-height: 1; transition: color 0.2s; }
+    .modal-close:hover { color: white; }
+    .form-field { margin-bottom: 1.25rem; }
+    .form-label { display: block; color: #0f2d1a; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-family: 'DM Sans', sans-serif; margin-bottom: 8px; }
+    .form-input { width: 100%; border: 1px solid #c8ddd0; padding: 0.75rem 1rem; font-size: 0.875rem; font-family: 'DM Sans', sans-serif; border-radius: 2px; outline: none; transition: border-color 0.2s; }
+    .form-input:focus { border-color: #166534; }
+    .form-select { width: 100%; border: 1px solid #c8ddd0; padding: 0.75rem 1rem; font-size: 0.875rem; font-family: 'DM Sans', sans-serif; border-radius: 2px; outline: none; background: white; }
+    .form-textarea { width: 100%; border: 1px solid #c8ddd0; padding: 0.75rem 1rem; font-size: 0.875rem; font-family: 'DM Sans', sans-serif; border-radius: 2px; outline: none; resize: vertical; min-height: 100px; }
 
-        /* Gradient Text */
-        .gradient-text {
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            color: var(--primary); /* Fallback */
-        }
+    /* WhatsApp float */
+    .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 99; width: 56px; height: 56px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: all 0.3s; text-decoration: none; }
+    .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
 
-        /* Hero Section */
-        .hero-gradient {
-            background: var(--gradient-hero);
-            position: relative;
-            overflow: hidden;
-        }
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .nav-links, .nav-right { display: none; }
+      .hamburger { display: block; }
+    }
+    @media (max-width: 768px) {
+      .stat-num { font-size: 2.5rem; }
+      .grid-3 { grid-template-columns: 1fr !important; }
+      .grid-2 { grid-template-columns: 1fr !important; }
+    }
 
-        .hero-gradient::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            pointer-events: none;
-        }
+    /* Carousel */
+    .carousel-track { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; transition: all 0.5s; }
+    @media (max-width: 768px) { .carousel-track { grid-template-columns: 1fr; } }
+    @media (max-width: 1024px) and (min-width: 769px) { .carousel-track { grid-template-columns: repeat(2, 1fr); } }
 
-        /* Card Hover Effects */
-        .card-hover {
-            transition: var(--transition-smooth);
-            cursor: pointer;
-        }
+    /* Coverage map dots */
+    .city-dot { position: absolute; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; border: 2px solid white; box-shadow: 0 0 0 3px rgba(201,168,76,0.3); animation: pulse-dot 2s infinite; }
+    @keyframes pulse-dot { 0%,100% { box-shadow: 0 0 0 3px rgba(201,168,76,0.3); } 50% { box-shadow: 0 0 0 6px rgba(201,168,76,0.1); } }
 
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-elegant);
-        }
-
-        /* WhatsApp Button */
-        .whatsapp-btn {
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-            transition: var(--transition-smooth);
-            border: none;
-            cursor: pointer;
-            color: white;
-            font-weight: 600;
-            padding: 0.75rem 1.5rem;
-            border-radius: var(--border-radius);
-        }
-
-        .whatsapp-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-        }
-
-        /* Button Styles */
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-            padding: 0.75rem 2rem;
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            transition: var(--transition-smooth);
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .btn-primary:hover {
-            background: var(--primary-glow);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-elegant);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--primary);
-            padding: 0.75rem 2rem;
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            transition: var(--transition-smooth);
-            border: 2px solid var(--primary);
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .btn-outline:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* Header Styles */
-        header {
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            transition: var(--transition-smooth);
-        }
-
-        header.scrolled {
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Mobile Menu */
-        .mobile-menu {
-            transition: var(--transition-smooth);
-        }
-
-        .mobile-menu.hidden {
-            display: none;
-        }
-
-        .mobile-menu-button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: var(--primary);
-        }
-
-        /* Navigation */
-        nav a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition-smooth);
-        }
-
-        nav a:hover {
-            color: var(--primary);
-        }
-
-        /* Section Spacing */
-        section {
-            position: relative;
-        }
-
-        /* Typography */
-        .hero-title {
-            font-size: 3rem;
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-subtitle {
-            font-size: 1.25rem;
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
-
-        @media (min-width: 768px) {
-            .hero-title {
-                font-size: 4rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.5rem;
-            }
-            
-            .section-title {
-                font-size: 3rem;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .hero-title {
-                font-size: 2.5rem !important;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.125rem !important;
-            }
-            
-            .section-title {
-                font-size: 2rem !important;
-            }
-        }
-
-        /* Loading Animation */
-        .image-loading {
-            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-            background-size: 200% 100%;
-            animation: loading 1.5s infinite;
-        }
-
-        @keyframes loading {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-
-        /* Accessibility */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-
-        /* Focus Styles */
-        button:focus,
-        a:focus {
-            outline: 2px solid var(--primary);
-            outline-offset: 2px;
-        }
-
-        /* Backdrop Blur */
-        .backdrop-blur {
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
-
-        /* Notification Styles */
-        .notification {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            padding: 1rem;
-            border-radius: var(--border-radius);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-            max-width: 400px;
-        }
-
-        .notification-success {
-            background: #10b981;
-            color: white;
-        }
-
-        .notification-error {
-            background: #ef4444;
-            color: white;
-        }
-
-        .notification-info {
-            background: #3b82f6;
-            color: white;
-        }
-
-        .notification-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .notification-close {
-            background: none;
-            border: none;
-            color: inherit;
-            cursor: pointer;
-            padding: 0.25rem;
-            margin-left: 1rem;
-        }
-
-        /* Print Styles */
-        @media print {
-            .no-print {
-                display: none !important;
-            }
-            
-            .hero-gradient {
-                background: white !important;
-                color: black !important;
-            }
-            
-            .whatsapp-btn {
-                background: var(--primary) !important;
-            }
-            
-            .card-hover:hover {
-                transform: none !important;
-                box-shadow: none !important;
-            }
-        }
-    </style>
+    /* Feature cards animation */
+    .feature-card { transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .feature-card:hover { transform: translateY(-6px); }
+    .feature-icon { width: 56px; height: 56px; border-radius: 2px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; transition: all 0.3s; }
+    .feature-card:hover .feature-icon { background: var(--gold) !important; }
+    .feature-card:hover .feature-icon svg { color: #14532d !important; }
+  </style>
 </head>
-<body class="bg-background text-foreground">
-    <!-- Header -->
-    <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur">
-        <div class="container mx-auto px-4 flex h-16 items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                    <i class="fas fa-truck text-white text-sm"></i>
-                </div>
-                <span class="text-xl font-bold gradient-text">KiwiMag Delivery</span>
-            </div>
-            
-            <nav class="hidden md:flex items-center space-x-6">
-                <a href="#servicii" class="text-sm font-medium hover:text-primary transition-colors">Servicii</a>
-                <a href="#tehnologie" class="text-sm font-medium hover:text-primary transition-colors">Tehnologie</a>
-                <a href="#preturi" class="text-sm font-medium hover:text-primary transition-colors">Prețuri</a>
-                <a href="#industrii" class="text-sm font-medium hover:text-primary transition-colors">Industrii</a>
-                <a href="#contact" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
-            </nav>
+<body>
 
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden mobile-menu-button p-2">
-                <i class="fas fa-bars text-xl"></i>
-            </button>
+<!-- ═══════════════════════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════════════════════ -->
+<nav id="navbar" class="top">
+  <div class="nav-inner">
+    <!-- Logo -->
+    <a class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663472279751/EnSAY3DRcdYRBoHXxYc9HM/kiwimag-logo_1022d881.jpeg" alt="Kiwi Mag Delivery Logo" />
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">Kiwi Mag</span>
+        <span class="nav-logo-sub">Delivery</span>
+      </div>
+    </a>
 
-            <button class="hidden md:block whatsapp-btn text-white border-0 px-4 py-2 rounded-md font-medium" onclick="openWhatsApp()">
-                <i class="fab fa-whatsapp mr-2"></i>
-                WhatsApp
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div class="mobile-menu hidden md:hidden bg-white border-t">
-            <nav class="container mx-auto px-4 py-4 space-y-2">
-                <a href="#servicii" class="block py-2 text-sm font-medium hover:text-primary transition-colors">Servicii</a>
-                <a href="#tehnologie" class="block py-2 text-sm font-medium hover:text-primary transition-colors">Tehnologie</a>
-                <a href="#preturi" class="block py-2 text-sm font-medium hover:text-primary transition-colors">Prețuri</a>
-                <a href="#industrii" class="block py-2 text-sm font-medium hover:text-primary transition-colors">Industrii</a>
-                <a href="#contact" class="block py-2 text-sm font-medium hover:text-primary transition-colors">Contact</a>
-                <button class="w-full mt-4 whatsapp-btn text-white border-0 px-4 py-2 rounded-md font-medium" onclick="openWhatsApp()">
-                    <i class="fab fa-whatsapp mr-2"></i>
-                    WhatsApp
-                </button>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero-gradient text-white py-20">
-        <div class="container mx-auto px-4 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h1 class="hero-title text-5xl md:text-6xl font-bold mb-6">
-                    Fiecare Pachet, Fiecare Promisiune - Livrată
-                </h1>
-                <p class="hero-subtitle text-xl md:text-2xl mb-8 text-white/90">
-                    Servicii complete de livrare B2B & B2C cu tehnologie avansată și standarde de siguranță superioare
-                </p>
-                
-              <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-    <button 
-        class="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 rounded-md font-medium transition-all duration-300 transform hover:scale-105"
-        onclick="openWhatsAppOrder()"
-    >
-        <i class="fas fa-gift mr-2"></i>
-        10 Curse GRATUITE
-    </button>
-
-    <button 
-        class="border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6 rounded-md font-medium transition-all duration-300"
-        onclick="openWhatsAppOrder()"
-    >
-        <i class="fas fa-phone mr-2"></i>
-        Solicită Ofertă
-    </button>
-</div>
-                </button>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                    <div class="bg-white/10 backdrop-blur rounded-lg p-6 card-hover">
-                        <i class="fas fa-clock text-4xl mb-3"></i>
-                        <h3 class="font-semibold mb-2">Livrare Express</h3>
-                        <p class="text-sm text-white/80">Până la 35 minute</p>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur rounded-lg p-6 card-hover">
-                        <i class="fas fa-shield-alt text-4xl mb-3"></i>
-                        <h3 class="font-semibold mb-2">Disponibilitate 24/7</h3>
-                        <p class="text-sm text-white/80">Weekend-uri și sărbători</p>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur rounded-lg p-6 card-hover">
-                        <i class="fas fa-thermometer-half text-4xl mb-3"></i>
-                        <h3 class="font-semibold mb-2">Transport Controlat</h3>
-                        <p class="text-sm text-white/80">Monitorizare în timp real</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Servicii Section -->
-       <section id="servicii" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="section-title text-4xl font-bold mb-4">Serviciile Noastre Complete</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Soluții de transport specializate pentru toate nevoile dumneavoastră de livrare
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-                <!-- Transport Specializat -->
-                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-truck text-primary text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold">Transport Specializat</h3>
-                            <p class="text-gray-600">Livrări B2B & B2C profesionale</p>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="flex items-start space-x-3">
-                            <i class="fas fa-check-circle text-primary mt-1"></i>
-                            <div>
-                                <p class="font-medium">Livrare Standard</p>
-                                <p class="text-sm text-gray-600">Livrări programate sau în intervale orare stabilite</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <i class="fas fa-bolt text-primary mt-1"></i>
-                            <div>
-                                <p class="font-medium">Livrare Express</p>
-                                <p class="text-sm text-gray-600">Până la 35 minute pentru nevoi urgente</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <i class="fas fa-thermometer-half text-primary mt-1"></i>
-                            <div>
-                                <p class="font-medium">Transport cu Temperatură Controlată</p>
-                                <p class="text-sm text-gray-600">Monitorizare în timp real cu alerte imediate</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <i class="fas fa-box text-primary mt-1"></i>
-                            <div>
-                                <p class="font-medium">Transport Agabaritic</p>
-                                <p class="text-sm text-gray-600">Manipularea și livrarea produselor voluminoase</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-primary/5 p-4 rounded-lg mt-6">
-                        <p class="text-sm"><strong>Acoperire:</strong> Națională pentru o accesibilitate largă</p>
-                        <p class="text-sm"><strong>Disponibilitate:</strong> 24/7, incluzând weekend-urile și sărbătorile</p>
-                    </div>
-                </div>
-
-                <!-- Șofer la Dispoziție -->
-                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-users text-primary text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold">Șofer la Dispoziție</h3>
-                            <p class="text-gray-600">Soluții personalizate și flexibile</p>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="flex items-start space-x-3">
-                            <i class="fas fa-clock text-primary mt-1"></i>
-                            <div>
-                                <p class="font-medium">Rată Orară Flexibilă</p>
-                                <p class="text-sm text-gray-600">Minimum 2 ore, garantăm profesionalism</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <i class="fas fa-star text-primary mt-1"></i>
-                            <div>
-                                <p class="font-medium">Prezență Dedicată</p>
-                                <p class="text-sm text-gray-600">Ideală pentru evenimente corporative sau transport VIP</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
-                            <div>
-                                <p class="font-medium">Transferuri Aeroport</p>
-                                <p class="text-sm text-gray-600">Servicii de concierge pentru transport internațional</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-primary/5 p-4 rounded-lg mt-6">
-                        <p class="text-sm font-medium text-primary">
-                            Serviciu caracterizat prin profesionalism garantat și prezență dedicată
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-  <!-- Tehnologie Section -->
-    <section id="tehnologie" class="py-20">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="section-title text-4xl font-bold mb-4">Platformă Tehnologică Avansată</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Tehnologie de ultimă generație pentru monitorizare și comunicare optimă
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fab fa-whatsapp text-primary text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold mb-2">WhatsApp Business</h3>
-                    <p class="text-sm text-gray-600">Comunicare instantanee și eficiență</p>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-users text-primary text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold mb-2">Ofițer de Cont Dedicat</h3>
-                    <p class="text-sm text-gray-600">Disponibil 24/7 pentru suport</p>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-bolt text-primary text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold mb-2">Integrare Aplicații</h3>
-                    <p class="text-sm text-gray-600">Mobile și desktop sincronizate</p>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-award text-primary text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold mb-2">Urmărire Performanțe</h3>
-                    <p class="text-sm text-gray-600">Monitorizare reală a curierilor</p>
-                </div>
-            </div>
-        </div>
-    </section>
-  <div style="
-  background:#16a34a; /* verde fundal */
-  padding:60px 20px;
-  text-align:center;
-">
-
-  <!-- Subtitle -->
-  <h2 style="
-    color:#ffffff; 
-    font-size:28px; 
-    margin-bottom:40px; 
-    font-weight:600;
-  ">
-   
-
-    <!-- Siguranță Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="section-title text-4xl font-bold mb-4">Standarde de Siguranță și Conformitate</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Respectăm cele mai înalte standarde naționale și europene pentru siguranță și calitate
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
-                    <div class="inline-block border border-primary text-primary px-4 py-2 rounded-full text-lg font-semibold mb-4">GDP</div>
-                    <h3 class="font-semibold mb-2">Bună practică de distribuție</h3>
-                    <p class="text-sm text-gray-600">Standarde pentru distribuția produselor farmaceutice</p>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
-                    <div class="inline-block border border-primary text-primary px-4 py-2 rounded-full text-lg font-semibold mb-4">DSVSA</div>
-                    <h3 class="font-semibold mb-2">Sanitară Veterinară și pentru Siguranța Alimentelor</h3>
-                    <p class="text-sm text-gray-600">Norme pentru siguranța alimentelor</p>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
-                    <div class="inline-block border border-primary text-primary px-4 py-2 rounded-full text-lg font-semibold mb-4">HACCP</div>
-                    <h3 class="font-semibold mb-2">Analiza pericolelor</h3>
-                    <p class="text-sm text-gray-600">Analiza riscurilor și puncte critice</p>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
-                    <div class="inline-block border border-primary text-primary px-4 py-2 rounded-full text-lg font-semibold mb-4">DGS</div>
-                    <h3 class="font-semibold mb-2">Siguranța mărfurilor periculoase</h3>
-                    <p class="text-sm text-gray-600">Siguranță pentru mărfuri periculoase</p>
-                </div>
-            </div>
-
-            <!-- Transport cu Control de Temperatură -->
-            <div class="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
-                <div class="text-center mb-8">
-                    <div class="flex items-center justify-center space-x-3 mb-4">
-                        <i class="fas fa-thermometer-half text-primary text-3xl"></i>
-                        <h3 class="text-2xl font-bold">Transport cu Control de Temperatură</h3>
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-shield-alt text-primary text-2xl"></i>
-                        </div>
-                        <h4 class="font-semibold mb-2">Monitorizare în Timp Real</h4>
-                        <p class="text-sm text-gray-600">Sistem de urmărire cu alerte imediate</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-box text-primary text-2xl"></i>
-                        </div>
-                        <h4 class="font-semibold mb-2">Containere Specializate</h4>
-                        <p class="text-sm text-gray-600">Conform standardelor pentru produse farmaceutice</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-award text-primary text-2xl"></i>
-                        </div>
-                        <h4 class="font-semibold mb-2">Produse Sensibile</h4>
-                        <p class="text-sm text-gray-600">Perfect pentru mostre medicale și produse sensibile</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-<div>
-    <!-- Prețuri Section -->
-    <section id="preturi" class="py-20">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="section-title text-4xl font-bold mb-4">Structura Noastră de Prețuri</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Transparență totală - prețuri fixe și clare pentru fiecare serviciu, fără costuri suplimentare
-                </p>
-            </div>
-
-            <!-- Servicii de bază -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
-                    <div class="text-3xl font-bold text-primary mb-2">De la 14 RON</div>
-                    <div class="text-xs text-gray-500 -mt-2">fără TVA</div>
-                    <h3 class="font-semibold mb-2">Livrare Standard</h3>
-                    <p class="text-sm text-gray-600">Intervale orare stabilite</p>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
-                    <div class="text-3xl font-bold text-primary mb-2">De la 17 RON</div>
-                    <div class="text-xs text-gray-500 -mt-2">fără TVA</div>
-                    <h3 class="font-semibold mb-2">Livrare Express</h3>
-                    <p class="text-sm text-gray-600">Livrare în sub 30 min</p>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
-                    <div class="text-3xl font-bold text-primary mb-2">De la 45 RON/oră</div>
-                    <div class="text-xs text-gray-500 -mt-2">fără TVA</div>
-                    <h3 class="font-semibold mb-2">Șofer la Dispoziție</h3>
-                    <p class="text-sm text-gray-600">Rată orară flexibilă</p>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
-                    <div class="text-3xl font-bold text-primary mb-2">De la 95 RON</div>
-                    <div class="text-xs text-gray-500 -mt-2">fără TVA</div>
-                    <h3 class="font-semibold mb-2">Transfer Aeroport</h3>
-                    <p class="text-sm text-gray-600">Servicii de concierge</p>
-                </div>
-            </div>
-
-            <!-- Pachete -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                <div class="bg-white rounded-lg shadow-lg p-6 border-2 border-primary/20 card-hover">
-                    <div class="text-center mb-6">
-                        <div class="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">PACHET START</div>
-                        <div class="text-4xl font-bold text-primary mb-2">1000 RON</div>
-                        <p class="text-gray-600">54 livrări incluse - Cost redus per livrare</p>
-                    </div>
-                    <ul class="space-y-2">
-                        <li class="flex items-center space-x-2">
-                            <i class="fas fa-check-circle text-primary"></i>
-                            <span class="text-sm">54 livrări incluse</span>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i class="fas fa-check-circle text-primary"></i>
-                            <span class="text-sm">Cost redus per livrare</span>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i class="fas fa-check-circle text-primary"></i>
-                            <span class="text-sm">Perfect pentru companii cu nevoi regulate</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-lg p-6 border-2 border-primary card-hover">
-                    <div class="text-center mb-6">
-                        <div class="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">PACHET PREMIUM</div>
-                        <div class="text-4xl font-bold text-primary mb-2">2000 RON</div>
-                        <p class="text-gray-600">125 livrări incluse - Cel mai bun cost per livrare</p>
-                    </div>
-                    <ul class="space-y-2">
-                        <li class="flex items-center space-x-2">
-                            <i class="fas fa-check-circle text-primary"></i>
-                            <span class="text-sm">125 livrări incluse</span>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i class="fas fa-check-circle text-primary"></i>
-                            <span class="text-sm">Cel mai bun cost per livrare</span>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i class="fas fa-check-circle text-primary"></i>
-                            <span class="text-sm">Prioritate la alocarea curierilor</span>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i class="fas fa-check-circle text-primary"></i>
-                            <span class="text-sm">Management dedicat</span>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i class="fas fa-check-circle text-primary"></i>
-                            <span class="text-sm">Ideal pentru companii cu nevoi elevate</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Oferte de lansare -->
-          <div class="bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-8">
-    <div class="text-center mb-8">
-        <h3 class="text-3xl font-bold mb-4">Oferte de Lansare & Promoții</h3>
-        <p class="text-lg text-gray-600">Profită de ofertele noastre speciale pentru parteneri noi!</p>
+    <!-- Desktop Links -->
+    <div class="nav-links">
+      <a onclick="scrollTo('servicii')" data-ro="Servicii" data-en="Services" data-bg="Услуги">Servicii</a>
+      <a onclick="scrollTo('tehnologie')" data-ro="Tehnologie" data-en="Technology" data-bg="Технология">Tehnologie</a>
+      <a onclick="scrollTo('preturi')" data-ro="Prețuri" data-en="Pricing" data-bg="Цени">Prețuri</a>
+      <a onclick="scrollTo('industrii')" data-ro="Industrii" data-en="Industries" data-bg="Индустрии">Industrii</a>
+      <a onclick="scrollTo('contact')" data-ro="Contact" data-en="Contact" data-bg="Контакт">Contact</a>
     </div>
 
-    <!-- FIXED GRID: 1 column mobile, 3 columns desktop -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
-            <i class="fas fa-gift text-primary text-4xl mb-4"></i>
-            <h4 class="font-semibold mb-2">10 Curse GRATUITE</h4>
-            <p class="text-sm text-gray-600">Pentru parteneri noi - testează calitatea serviciului</p>
+    <!-- Right side -->
+    <div class="nav-right">
+      <!-- Language Switcher -->
+      <div style="position:relative;">
+        <button class="lang-btn" id="langBtn" onclick="toggleLangDropdown()">RO ▾</button>
+        <div class="lang-dropdown" id="langDropdown">
+          <button class="lang-option active" onclick="setLang('ro')">RO</button>
+          <button class="lang-option" onclick="setLang('en')">EN</button>
+          <button class="lang-option" onclick="setLang('bg')">BG</button>
         </div>
-
-        <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
-            <i class="fas fa-dollar-sign text-primary text-4xl mb-4"></i>
-            <h4 class="font-semibold mb-2">Doar 10 RON</h4>
-            <p class="text-sm text-gray-600">Pentru primele 20 livrări - ofertă de lansare</p>
-        </div>
-
-        <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
-            <div class="inline-block border border-primary text-primary px-3 py-1 rounded text-sm font-semibold mb-4">VIP</div>
-            <h4 class="font-semibold mb-2">Pachet VIP</h4>
-            <p class="text-sm text-gray-600">20 livrări GRATUITE pentru pachete PREMIUM/START</p>
-        </div>
-
+      </div>
+      <a href="https://wa.me/40741699028" target="_blank" style="color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.8rem;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:6px;">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <button class="btn-gold" onclick="scrollTo('contact')" data-ro="Solicită Ofertă" data-en="Request Quote" data-bg="Запитване">Solicită Ofertă</button>
     </div>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a onclick="scrollTo('servicii');toggleMenu()" data-ro="Servicii" data-en="Services" data-bg="Услуги">Servicii</a>
+    <a onclick="scrollTo('tehnologie');toggleMenu()" data-ro="Tehnologie" data-en="Technology" data-bg="Технология">Tehnologie</a>
+    <a onclick="scrollTo('preturi');toggleMenu()" data-ro="Prețuri" data-en="Pricing" data-bg="Цени">Prețuri</a>
+    <a onclick="scrollTo('industrii');toggleMenu()" data-ro="Industrii" data-en="Industries" data-bg="Индустрии">Industrii</a>
+    <a onclick="scrollTo('contact');toggleMenu()" data-ro="Contact" data-en="Contact" data-bg="Контакт">Contact</a>
+    <div style="display:flex;gap:8px;padding-top:8px;">
+      <button class="lang-option" onclick="setLang('ro')" style="border:1px solid rgba(201,168,76,0.4);border-radius:2px;padding:4px 12px;">RO</button>
+      <button class="lang-option" onclick="setLang('en')" style="border:1px solid rgba(201,168,76,0.4);border-radius:2px;padding:4px 12px;">EN</button>
+      <button class="lang-option" onclick="setLang('bg')" style="border:1px solid rgba(201,168,76,0.4);border-radius:2px;padding:4px 12px;">BG</button>
+    </div>
+    <button class="btn-gold" onclick="scrollTo('contact');toggleMenu()" style="margin-top:8px;">Solicită Ofertă</button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════════ -->
+<section id="hero" style="min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:url('https://d2xsxph8kpxj0f.cloudfront.net/310519663472279751/EnSAY3DRcdYRBoHXxYc9HM/hero-courier-new-94r7xWjKGNovBhCcQ9dvbN.webp');background-size:cover;background-position:center right;"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(105deg, rgba(15,45,26,0.92) 0%, rgba(15,45,26,0.75) 50%, rgba(15,45,26,0.3) 100%);"></div>
+  <div style="position:relative;z-index:2;max-width:1320px;margin:0 auto;padding:8rem 2rem 4rem;">
+    <div class="gold-label reveal">
+      <div class="gold-label-line"></div>
+      <span data-ro="Servicii Complete de Livrare B2B" data-en="Complete B2B Delivery Services" data-bg="Пълни B2B Услуги за Доставка">Servicii Complete de Livrare B2B</span>
+    </div>
+    <h1 class="reveal delay-1" style="font-size:clamp(2.8rem,6vw,5.5rem);font-weight:600;color:white;line-height:1.1;margin-bottom:1.5rem;max-width:700px;">
+      <span data-ro="Fiecare Pachet," data-en="Every Package," data-bg="Всеки Пакет,">Fiecare Pachet,</span><br/>
+      <span style="color:var(--gold);" data-ro="Fiecare Promisiune" data-en="Every Promise" data-bg="Всяко Обещание">Fiecare Promisiune</span><br/>
+      <span data-ro="— Livrată." data-en="— Delivered." data-bg="— Доставено.">— Livrată.</span>
+    </h1>
+    <p class="reveal delay-2" style="color:rgba(255,255,255,0.75);font-size:1.1rem;max-width:520px;line-height:1.7;margin-bottom:2.5rem;font-weight:300;" data-ro="Servicii de curierat expres B2B cu angajați proprii, standarde farmaceutice certificate și disponibilitate 24/7. Acoperire națională România + Bulgaria." data-en="B2B express courier services with own employees, certified pharmaceutical standards and 24/7 availability. National coverage Romania + Bulgaria." data-bg="B2B експресни куриерски услуги със собствени служители, сертифицирани фармацевтични стандарти и 24/7 наличност.">
+      Servicii de curierat expres B2B cu angajați proprii, standarde farmaceutice certificate și disponibilitate 24/7. Acoperire națională România + Bulgaria.
+    </p>
+    <div class="reveal delay-3" style="display:flex;gap:1rem;flex-wrap:wrap;">
+      <button class="btn-outline" onclick="openCareers()" data-ro="10 Curse Gratuite" data-en="10 Free Deliveries" data-bg="10 Безплатни Доставки">10 Curse Gratuite</button>
+      <button class="btn-gold" onclick="scrollTo('contact')" data-ro="Solicită Ofertă" data-en="Request Quote" data-bg="Запитване">Solicită Ofertă</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     STATS
+═══════════════════════════════════════════════════════════ -->
+<section class="section-dark" style="padding:5rem 0;">
+  <div style="max-width:1320px;margin:0 auto;padding:0 2rem;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:3rem;text-align:center;">
+      <div class="reveal">
+        <div class="stat-num" data-target="35" data-suffix=" min">0 min</div>
+        <div class="stat-label" data-ro="Livrare Expres" data-en="Express Delivery" data-bg="Експресна Доставка">Livrare Expres</div>
+      </div>
+      <div class="reveal delay-1">
+        <div class="stat-num" data-target="24" data-suffix="/7">0/7</div>
+        <div class="stat-label" data-ro="Disponibilitate" data-en="Availability" data-bg="Наличност">Disponibilitate</div>
+      </div>
+      <div class="reveal delay-2">
+        <div class="stat-num" data-target="150" data-suffix="+">0+</div>
+        <div class="stat-label" data-ro="Recenzii 5 Stele" data-en="5-Star Reviews" data-bg="5-Звездни Отзиви">Recenzii 5 Stele</div>
+      </div>
+      <div class="reveal delay-3">
+        <div class="stat-num" data-target="16" data-suffix=" orașe">0 orașe</div>
+        <div class="stat-label" data-ro="Acoperire Națională" data-en="National Coverage" data-bg="Национално Покритие">Acoperire Națională</div>
+      </div>
+      <div class="reveal delay-4">
+        <div class="stat-num" data-target="100" data-suffix="%">0%</div>
+        <div class="stat-label" data-ro="Angajați Proprii" data-en="Own Employees" data-bg="Собствени Служители">Angajați Proprii</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICII
+═══════════════════════════════════════════════════════════ -->
+<section id="servicii" style="padding:7rem 0;background:var(--cream);">
+  <div style="max-width:1320px;margin:0 auto;padding:0 2rem;">
+    <div class="gold-label reveal">
+      <div class="gold-label-line"></div>
+      <span data-ro="Ce Oferim" data-en="What We Offer" data-bg="Какво Предлагаме">Ce Oferim</span>
+    </div>
+    <h2 class="reveal delay-1" style="font-size:clamp(2rem,4vw,3.5rem);color:#0f2d1a;margin-bottom:1rem;" data-ro="Servicii de Livrare<br/>Fără Compromisuri" data-en="Delivery Services<br/>Without Compromise" data-bg="Услуги за Доставка<br/>Без Компромиси">
+      Servicii de Livrare<br/>Fără Compromisuri
+    </h2>
+    <p class="reveal delay-2" style="color:#4a7a5a;font-size:1rem;max-width:560px;line-height:1.7;margin-bottom:4rem;font-weight:300;" data-ro="Fiecare serviciu este conceput pentru a răspunde cerințelor specifice ale partenerilor noștri B2B, cu standarde de calitate certificate." data-en="Every service is designed to meet the specific requirements of our B2B partners, with certified quality standards." data-bg="Всяка услуга е проектирана да отговаря на специфичните изисквания на нашите B2B партньори.">
+      Fiecare serviciu este conceput pentru a răspunde cerințelor specifice ale partenerilor noștri B2B, cu standarde de calitate certificate.
+    </p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+      <!-- Card 1 -->
+      <div class="card-premium feature-card reveal" style="padding:2rem;">
+        <div class="feature-icon" style="background:rgba(22,101,52,0.08);">
+          <svg width="24" height="24" fill="none" stroke="#166534" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3 style="font-size:1.3rem;color:#0f2d1a;margin-bottom:0.75rem;" data-ro="Livrare Expres 35 Min" data-en="35 Min Express Delivery" data-bg="35 Мин Експресна Доставка">Livrare Expres 35 Min</h3>
+        <p style="color:#4a7a5a;font-size:0.875rem;line-height:1.7;font-weight:300;" data-ro="Cel mai apropiat curier disponibil preia comanda și livrează în maximum 35 de minute. Ideal pentru urgențe medicale, farmacii și restaurante." data-en="The nearest available courier picks up the order and delivers in maximum 35 minutes. Ideal for medical emergencies, pharmacies and restaurants." data-bg="Най-близкият наличен куриер взима поръчката и доставя за максимум 35 минути.">Cel mai apropiat curier disponibil preia comanda și livrează în maximum 35 de minute. Ideal pentru urgențe medicale, farmacii și restaurante.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="card-premium feature-card reveal delay-1" style="padding:2rem;">
+        <div class="feature-icon" style="background:rgba(22,101,52,0.08);">
+          <svg width="24" height="24" fill="none" stroke="#166534" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3 style="font-size:1.3rem;color:#0f2d1a;margin-bottom:0.75rem;" data-ro="Transport Temperatură Controlată" data-en="Temperature Controlled Transport" data-bg="Транспорт с Контролирана Температура">Transport Temperatură Controlată</h3>
+        <p style="color:#4a7a5a;font-size:0.875rem;line-height:1.7;font-weight:300;" data-ro="Lăzi euro din plastic 600×400mm cu capac termic, pliabile sau standard. Special concepute pentru produse sensibile: medicamente, alimente, probe biologice." data-en="Euro plastic crates 600×400mm with thermal lid, foldable or standard. Specially designed for sensitive products: medicines, food, biological samples." data-bg="Евро пластмасови щайги 600×400мм с термично капаче, сгъваеми или стандартни.">Lăzi euro din plastic 600×400mm cu capac termic, pliabile sau standard. Special concepute pentru produse sensibile: medicamente, alimente, probe biologice.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="card-premium feature-card reveal delay-2" style="padding:2rem;">
+        <div class="feature-icon" style="background:rgba(22,101,52,0.08);">
+          <svg width="24" height="24" fill="none" stroke="#166534" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        </div>
+        <h3 style="font-size:1.3rem;color:#0f2d1a;margin-bottom:0.75rem;" data-ro="Livrare Standard cu Orar Fix" data-en="Standard Delivery Fixed Schedule" data-bg="Стандартна Доставка с Фиксиран График">Livrare Standard cu Orar Fix</h3>
+        <p style="color:#4a7a5a;font-size:0.875rem;line-height:1.7;font-weight:300;" data-ro="De la 17 RON în limita a 5 km. Se stabilesc orare fixe pentru colectare și livrare. Se pot transporta orice tipuri de produse. Se aplică termeni și condiții." data-en="From 17 RON within 5 km. Fixed schedules for collection and delivery. Any type of products can be transported. Terms and conditions apply." data-bg="От 17 RON в рамките на 5 км. Фиксирани графици за събиране и доставка.">De la 17 RON în limita a 5 km. Se stabilesc orare fixe pentru colectare și livrare. Se pot transporta orice tipuri de produse. Se aplică termeni și condiții.</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="card-premium feature-card reveal delay-3" style="padding:2rem;">
+        <div class="feature-icon" style="background:rgba(22,101,52,0.08);">
+          <svg width="24" height="24" fill="none" stroke="#166534" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <h3 style="font-size:1.3rem;color:#0f2d1a;margin-bottom:0.75rem;" data-ro="Sisteme de Curierat Personalizate" data-en="Custom Courier Systems" data-bg="Персонализирани Куриерски Системи">Sisteme de Curierat Personalizate</h3>
+        <p style="color:#4a7a5a;font-size:0.875rem;line-height:1.7;font-weight:300;" data-ro="Modele și sisteme de curierat personalizate pentru nevoile specifice ale afacerii dvs. Suntem deschiși și în căutare de noi proiecte și parteneriate." data-en="Custom courier models and systems for your business's specific needs. We are open and looking for new projects and partnerships." data-bg="Персонализирани куриерски модели и системи за специфичните нужди на вашия бизнес.">Modele și sisteme de curierat personalizate pentru nevoile specifice ale afacerii dvs. Suntem deschiși și în căutare de noi proiecte și parteneriate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     VAN IMAGE SECTION
+═══════════════════════════════════════════════════════════ -->
+<section style="padding:0;overflow:hidden;position:relative;height:420px;">
+  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663472279751/EnSAY3DRcdYRBoHXxYc9HM/kiwimag-van-exact-logo_535bb920.png" alt="Kiwi Mag Delivery Van" style="width:100%;height:100%;object-fit:cover;object-position:center;" />
+  <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(15,45,26,0.85) 0%, rgba(15,45,26,0.4) 60%, transparent 100%);display:flex;align-items:center;">
+    <div style="max-width:1320px;margin:0 auto;padding:0 2rem;">
+      <p style="color:var(--gold);font-size:0.7rem;letter-spacing:0.3em;text-transform:uppercase;font-family:'DM Sans',sans-serif;margin-bottom:1rem;">Every Package, Every Promise</p>
+      <h2 style="font-size:clamp(2rem,4vw,3.5rem);color:white;font-family:'Cormorant Garamond',serif;font-weight:600;max-width:500px;" data-ro="Flota Noastră.<br/>Angajații Noștri.<br/>Responsabilitatea Noastră." data-en="Our Fleet.<br/>Our Employees.<br/>Our Responsibility." data-bg="Нашият Флот.<br/>Нашите Служители.<br/>Нашата Отговорност.">
+        Flota Noastră.<br/>Angajații Noștri.<br/>Responsabilitatea Noastră.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TEHNOLOGIE
+═══════════════════════════════════════════════════════════ -->
+<section id="tehnologie" class="section-mid" style="padding:7rem 0;">
+  <div style="max-width:1320px;margin:0 auto;padding:0 2rem;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;" class="grid-2">
+      <div>
+        <div class="gold-label reveal">
+          <div class="gold-label-line"></div>
+          <span data-ro="Platforma Noastră" data-en="Our Platform" data-bg="Нашата Платформа">Platforma Noastră</span>
+        </div>
+        <h2 class="reveal delay-1" style="font-size:clamp(2rem,3.5vw,3rem);color:white;margin-bottom:1.5rem;" data-ro="Tehnologie de Urmărire<br/>în Timp Real" data-en="Real-Time Tracking<br/>Technology" data-bg="Технология за Проследяване<br/>в Реално Време">
+          Tehnologie de Urmărire<br/>în Timp Real
+        </h2>
+        <p class="reveal delay-2" style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.8;margin-bottom:2rem;font-weight:300;" data-ro="Platforma noastră proprietară oferă vizibilitate completă asupra fiecărei livrări. Dispecerat centralizat, raportare KPI săptămânală și notificări automate pentru clienți." data-en="Our proprietary platform provides complete visibility over every delivery. Centralized dispatch, weekly KPI reporting and automatic customer notifications." data-bg="Нашата собствена платформа осигурява пълна видимост върху всяка доставка.">
+          Platforma noastră proprietară oferă vizibilitate completă asupra fiecărei livrări. Dispecerat centralizat, raportare KPI săptămânală și notificări automate pentru clienți.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:1rem;">
+          <div class="reveal delay-3" style="display:flex;align-items:center;gap:1rem;">
+            <div style="width:8px;height:8px;background:var(--gold);border-radius:50%;flex-shrink:0;"></div>
+            <span style="color:rgba(255,255,255,0.8);font-size:0.875rem;" data-ro="GPS tracking în timp real pentru toți curierii" data-en="Real-time GPS tracking for all couriers" data-bg="GPS проследяване в реално време за всички куриери">GPS tracking în timp real pentru toți curierii</span>
+          </div>
+          <div class="reveal delay-3" style="display:flex;align-items:center;gap:1rem;">
+            <div style="width:8px;height:8px;background:var(--gold);border-radius:50%;flex-shrink:0;"></div>
+            <span style="color:rgba(255,255,255,0.8);font-size:0.875rem;" data-ro="Raportare KPI săptămânală pentru parteneri B2B" data-en="Weekly KPI reporting for B2B partners" data-bg="Седмично KPI отчитане за B2B партньори">Raportare KPI săptămânală pentru parteneri B2B</span>
+          </div>
+          <div class="reveal delay-3" style="display:flex;align-items:center;gap:1rem;">
+            <div style="width:8px;height:8px;background:var(--gold);border-radius:50%;flex-shrink:0;"></div>
+            <span style="color:rgba(255,255,255,0.8);font-size:0.875rem;" data-ro="Confirmare livrare cu semnătură electronică" data-en="Delivery confirmation with electronic signature" data-bg="Потвърждение за доставка с електронен подпис">Confirmare livrare cu semnătură electronică</span>
+          </div>
+          <div class="reveal delay-3" style="display:flex;align-items:center;gap:1rem;">
+            <div style="width:8px;height:8px;background:var(--gold);border-radius:50%;flex-shrink:0;"></div>
+            <span style="color:rgba(255,255,255,0.8);font-size:0.875rem;" data-ro="Integrare API cu sistemele ERP ale clienților" data-en="API integration with client ERP systems" data-bg="API интеграция с ERP системите на клиентите">Integrare API cu sistemele ERP ale clienților</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal delay-2" style="position:relative;">
+        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663472279751/EnSAY3DRcdYRBoHXxYc9HM/dispatch-map-tracking-Lv8PwY397a7XtsrQxpQ2W6.webp" alt="Platforma de tracking KiwiMag" style="width:100%;border-radius:2px;box-shadow:0 20px 60px rgba(0,0,0,0.4);" />
+        <div style="position:absolute;bottom:-1.5rem;left:-1.5rem;background:var(--gold);padding:1.25rem 1.75rem;border-radius:2px;">
+          <div style="font-size:1.75rem;font-family:'Cormorant Garamond',serif;font-weight:600;color:#0f2d1a;">24/7</div>
+          <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#0f2d1a;font-family:'DM Sans',sans-serif;" data-ro="Monitorizare Activă" data-en="Active Monitoring" data-bg="Активно Наблюдение">Monitorizare Activă</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CERTIFICARI
+═══════════════════════════════════════════════════════════ -->
+<section style="padding:5rem 0;background:white;">
+  <div style="max-width:1320px;margin:0 auto;padding:0 2rem;">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div class="gold-label reveal" style="justify-content:center;">
+        <div class="gold-label-line"></div>
+        <span data-ro="Standarde Internaționale" data-en="International Standards" data-bg="Международни Стандарти">Standarde Internaționale</span>
+        <div class="gold-label-line"></div>
+      </div>
+      <h2 class="reveal delay-1" style="font-size:2rem;color:#0f2d1a;" data-ro="Certificări & Conformitate" data-en="Certifications & Compliance" data-bg="Сертификации и Съответствие">Certificări & Conformitate</h2>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+      <div class="reveal" style="background:var(--cream);border:1px solid #d1e7d9;padding:1rem 1.75rem;border-radius:2px;text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#0f2d1a;">ISO 9001</div>
+        <div style="font-size:0.65rem;color:#4a7a5a;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif;">Calitate</div>
+      </div>
+      <div class="reveal delay-1" style="background:var(--cream);border:1px solid #d1e7d9;padding:1rem 1.75rem;border-radius:2px;text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#0f2d1a;">ISO 14001</div>
+        <div style="font-size:0.65rem;color:#4a7a5a;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif;">Mediu</div>
+      </div>
+      <div class="reveal delay-2" style="background:var(--cream);border:1px solid #d1e7d9;padding:1rem 1.75rem;border-radius:2px;text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#0f2d1a;">ISO 45001</div>
+        <div style="font-size:0.65rem;color:#4a7a5a;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif;">Sănătate & Securitate</div>
+      </div>
+      <div class="reveal delay-3" style="background:var(--cream);border:1px solid #d1e7d9;padding:1rem 1.75rem;border-radius:2px;text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#0f2d1a;">ISO 27001</div>
+        <div style="font-size:0.65rem;color:#4a7a5a;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif;">Securitate Informații</div>
+      </div>
+      <div class="reveal delay-4" style="background:var(--cream);border:1px solid #d1e7d9;padding:1rem 1.75rem;border-radius:2px;text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#0f2d1a;">GDP</div>
+        <div style="font-size:0.65rem;color:#4a7a5a;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif;">Bune Practici Distribuție</div>
+      </div>
+      <div class="reveal delay-4" style="background:var(--cream);border:1px solid #d1e7d9;padding:1rem 1.75rem;border-radius:2px;text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#0f2d1a;">HACCP</div>
+        <div style="font-size:0.65rem;color:#4a7a5a;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif;">Siguranță Alimentară</div>
+      </div>
+      <div class="reveal delay-4" style="background:var(--cream);border:1px solid #d1e7d9;padding:1rem 1.75rem;border-radius:2px;text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#0f2d1a;">DSVSA</div>
+        <div style="font-size:0.65rem;color:#4a7a5a;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif;">Autorizație Veterinară</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     LAZI EURO
+═══════════════════════════════════════════════════════════ -->
+<section style="padding:7rem 0;background:var(--cream);">
+  <div style="max-width:1320px;margin:0 auto;padding:0 2rem;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;" class="grid-2">
+      <div class="reveal">
+        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663472279751/EnSAY3DRcdYRBoHXxYc9HM/kiwimag-crates-van-exact_79665323.png" alt="Lăzi Euro KiwiMag" style="width:100%;border-radius:2px;box-shadow:0 12px 40px rgba(20,83,45,0.15);" />
+      </div>
+      <div>
+        <div class="gold-label reveal">
+          <div class="gold-label-line"></div>
+          <span data-ro="Infrastructură Proprie" data-en="Own Infrastructure" data-bg="Собствена Инфраструктура">Infrastructură Proprie</span>
+        </div>
+        <h2 class="reveal delay-1" style="font-size:clamp(1.8rem,3vw,2.8rem);color:#0f2d1a;margin-bottom:1.25rem;" data-ro="Lăzi Euro Standard<br/>pentru Produse Sensibile" data-en="Euro Standard Crates<br/>for Sensitive Products" data-bg="Евро Стандартни Щайги<br/>за Чувствителни Продукти">
+          Lăzi Euro Standard<br/>pentru Produse Sensibile
+        </h2>
+        <p class="reveal delay-2" style="color:#4a7a5a;font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem;font-weight:300;" data-ro="Lăzile noastre euro din plastic 600×400mm sunt special concepute pentru produse sensibile — medicamente, produse biologice, alimente refrigerate. Disponibile cu capac termic, pliabile sau standard, ele asigură integritatea produselor pe toată durata transportului." data-en="Our 600×400mm euro plastic crates are specially designed for sensitive products — medicines, biological products, refrigerated food. Available with thermal lid, foldable or standard, they ensure product integrity throughout transport." data-bg="Нашите евро пластмасови щайги 600×400мм са специално проектирани за чувствителни продукти.">
+          Lăzile noastre euro din plastic 600×400mm sunt special concepute pentru produse sensibile — medicamente, produse biologice, alimente refrigerate. Disponibile cu capac termic, pliabile sau standard, ele asigură integritatea produselor pe toată durata transportului.
+        </p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div class="reveal delay-3" style="background:white;border:1px solid #d1e7d9;padding:1rem;border-radius:2px;">
+            <div style="font-size:0.7rem;color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',sans-serif;margin-bottom:4px;">Dimensiune</div>
+            <div style="font-size:1rem;font-family:'Cormorant Garamond',serif;font-weight:600;color:#0f2d1a;">600 × 400 mm</div>
+          </div>
+          <div class="reveal delay-3" style="background:white;border:1px solid #d1e7d9;padding:1rem;border-radius:2px;">
+            <div style="font-size:0.7rem;color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',sans-serif;margin-bottom:4px;">Tip</div>
+            <div style="font-size:1rem;font-family:'Cormorant Garamond',serif;font-weight:600;color:#0f2d1a;">Euro Standard</div>
+          </div>
+          <div class="reveal delay-4" style="background:white;border:1px solid #d1e7d9;padding:1rem;border-radius:2px;">
+            <div style="font-size:0.7rem;color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',sans-serif;margin-bottom:4px;">Variante</div>
+            <div style="font-size:1rem;font-family:'Cormorant Garamond',serif;font-weight:600;color:#0f2d1a;">Cu capac / Pliabile</div>
+          </div>
+          <div class="reveal delay-4" style="background:white;border:1px solid #d1e7d9;padding:1rem;border-radius:2px;">
+            <div style="font-size:0.7rem;color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',sans-serif;margin-bottom:4px;">Utilizare</div>
+            <div style="font-size:1rem;font-family:'Cormorant Garamond',serif;font-weight:600;color:#0f2d1a;">Produse Sensibile</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PRETURI
+═══════════════════════════════════════════════════════════ -->
+<section id="preturi" class="section-dark" style="padding:7rem 0;">
+  <div style="max-width:1320px;margin:0 auto;padding:0 2rem;">
+    <div class="gold-label reveal">
+      <div class="gold-label-line"></div>
+      <span data-ro="Tarife Transparente" data-en="Transparent Pricing" data-bg="Прозрачни Тарифи">Tarife Transparente</span>
+    </div>
+    <h2 class="reveal delay-1" style="font-size:clamp(2rem,4vw,3.5rem);color:white;margin-bottom:1rem;" data-ro="Prețuri Clare,<br/>Fără Surprize" data-en="Clear Prices,<br/>No Surprises" data-bg="Ясни Цени,<br/>Без Изненади">
+      Prețuri Clare,<br/>Fără Surprize
+    </h2>
+    <p class="reveal delay-2" style="color:rgba(255,255,255,0.6);font-size:0.95rem;max-width:500px;line-height:1.7;margin-bottom:4rem;font-weight:300;" data-ro="Tarife adaptate volumului și frecvenței. Primele 10 curse sunt gratuite pentru parteneri noi." data-en="Rates adapted to volume and frequency. First 10 deliveries are free for new partners." data-bg="Тарифи, адаптирани към обема и честотата. Първите 10 доставки са безплатни за нови партньори.">
+      Tarife adaptate volumului și frecvenței. Primele 10 curse sunt gratuite pentru parteneri noi.
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+      <!-- Standard -->
+      <div class="pricing-card standard reveal">
+        <div style="font-size:0.7rem;color:var(--gold);letter-spacing:0.25em;text-transform:uppercase;font-family:'DM Sans',sans-serif;margin-bottom:1rem;" data-ro="Livrare Standard" data-en="Standard Delivery" data-bg="Стандартна Доставка">Livrare Standard</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:600;color:#0f2d1a;line-height:1;">17 <span style="font-size:1.2rem;">RON</span></div>
+        <div style="font-size:0.75rem;color:#4a7a5a;margin-bottom:1.5rem;font-family:'DM Sans',sans-serif;" data-ro="de la / în limita a 5 km" data-en="from / within 5 km" data-bg="от / в рамките на 5 км">de la / în limita a 5 km</div>
+        <div style="height:1px;background:#d1e7d9;margin-bottom:1.5rem;"></div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem;">
+          <li style="display:flex;align-items:center;gap:10px;font-size:0.875rem;color:#4a7a5a;"><span style="color:var(--gold);">✓</span> <span data-ro="Orar fix stabilit de comun acord" data-en="Fixed schedule agreed mutually" data-bg="Фиксиран график по взаимно съгласие">Orar fix stabilit de comun acord</span></li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:0.875rem;color:#4a7a5a;"><span style="color:var(--gold);">✓</span> <span data-ro="Orice tip de produse" data-en="Any type of products" data-bg="Всякакъв вид продукти">Orice tip de produse</span></li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:0.875rem;color:#4a7a5a;"><span style="color:var(--gold);">✓</span> <span data-ro="Se aplică termeni și condiții" data-en="Terms and conditions apply" data-bg="Прилагат се условия">Se aplică termeni și condiții</span></li>
+        </ul>
+        <button class="btn-primary-green" onclick="scrollTo('contact')" style="width:100%;" data-ro="Solicită Ofertă" data-en="Request Quote" data-bg="Запитване">Solicită Ofertă</button>
+      </div>
+      <!-- Expres -->
+      <div class="pricing-card featured reveal delay-1" style="position:relative;">
+        <div style="position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--gold);color:#0f2d1a;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;padding:4px 16px;font-family:'DM Sans',sans-serif;font-weight:600;border-radius:0 0 4px 4px;" data-ro="Cel Mai Popular" data-en="Most Popular" data-bg="Най-Популярен">Cel Mai Popular</div>
+        <div style="font-size:0.7rem;color:var(--gold);letter-spacing:0.25em;text-transform:uppercase;font-family:'DM Sans',sans-serif;margin-bottom:1rem;" data-ro="Livrare Expres" data-en="Express Delivery" data-bg="Експресна Доставка">Livrare Expres</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:600;color:white;line-height:1;">35 <span style="font-size:1.2rem;">min</span></div>
+        <div style="font-size:0.75rem;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;font-family:'DM Sans',sans-serif;" data-ro="livrare garantată" data-en="guaranteed delivery" data-bg="гарантирана доставка">livrare garantată</div>
+        <div style="height:1px;background:rgba(255,255,255,0.15);margin-bottom:1.5rem;"></div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem;">
+          <li style="display:flex;align-items:center;gap:10px;font-size:0.875rem;color:rgba(255,255,255,0.8);"><span style="color:var(--gold);">✓</span> <span data-ro="Cel mai apropiat curier disponibil" data-en="Nearest available courier" data-bg="Най-близкият наличен куриер">Cel mai apropiat curier disponibil</span></li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:0.875rem;color:rgba(255,255,255,0.8);"><span style="color:var(--gold);">✓</span> <span data-ro="Tracking GPS în timp real" data-en="Real-time GPS tracking" data-bg="GPS проследяване в реално време">Tracking GPS în timp real</span></li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:0.875rem;color:rgba(255,255,255,0.8);"><span style="color:var(--gold);">✓</span> <span data-ro="Confirmare cu semnătură electronică" data-en="Electronic signature confirmation" data-bg="Потвърждение с електронен подпис">Confirmare cu semnătură electronică</span></li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:0.875rem;color:rgba(255,255,255,0.8);"><span style="color:var(--gold);">✓</span> <span data-ro="Disponibil 24/7" data-en="Available 24/7" data-bg="Наличен 24/7">Disponibil 24/7</span></li>
+        </ul>
+        <button class="btn-gold" onclick="scrollTo('contact')" style="width:100%;" data-ro="Solicită Ofertă" data-en="Request Quote" data-bg="Запитване">Solicită Ofertă</button>
+      </div>
+      <!-- Custom -->
+      <div class="pricing-card standard reveal delay-2">
+        <div style="font-size:0.7rem;color:var(--gold);letter-spacing:0.25em;text-transform:uppercase;font-family:'DM Sans',sans-serif;margin-bottom:1rem;" data-ro="Soluție Personalizată" data-en="Custom Solution" data-bg="Персонализирано Решение">Soluție Personalizată</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:600;color:#0f2d1a;line-height:1;">Custom</div>
+        <div style="font-size:0.75rem;color:#4a7a5a;margin-bottom:1.5rem;font-family:'DM Sans',sans-serif;" data-ro="adaptat nevoilor tale" data-en="adapted to your needs" data-bg="адаптирано към вашите нужди">adaptat nevoilor tale</div>
+        <div style="height:1px;background:#d1e7d9;margin-bottom:1.5rem;"></div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem;">
+          <li style="display:flex;align-items:center;gap:10px;font-size:0.875rem;color:#4a7a5a;"><span style="color:var(--gold);">✓</span> <span data-ro="Model de curierat complet personalizat" data-en="Fully customized courier model" data-bg="Напълно персонализиран куриерски модел">Model de curierat complet personalizat</span></li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:0.875rem;color:#4a7a5a;"><span style="color:var(--gold);">✓</span> <span data-ro="Integrare în sistemele existente" data-en="Integration into existing systems" data-bg="Интеграция в съществуващите системи">Integrare în sistemele existente</span></li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:0.875rem;color:#4a7a5a;"><span style="color:var(--gold);">✓</span> <span data-ro="Suntem deschiși pentru noi proiecte" data-en="We are open for new projects" data-bg="Отворени сме за нови проекти">Suntem deschiși pentru noi proiecte</span></li>
+        </ul>
+        <button class="btn-primary-green" onclick="scrollTo('contact')" style="width:100%;" data-ro="Discutăm" data-en="Let's Talk" data-bg="Нека Говорим">Discutăm</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     INDUSTRII
+═══════════════════════════════════════════════════════════ -->
+<section id="industrii" class="section-mid" style="padding:7rem 0;">
+  <div style="max-width:1320px;margin:0 auto;padding:0 2rem;">
+    <div class="gold-label reveal">
+      <div class="gold-label-line"></div>
+      <span data-ro="Ecosistem de Livrare" data-en="Delivery Ecosystem" data-bg="Екосистема за Доставка">Ecosistem de Livrare</span>
+    </div>
+    <h2 class="reveal delay-1" style="font-size:clamp(2rem,4vw,3.5rem);color:white;margin-bottom:1rem;" data-ro="Un Partener pentru<br/>Orice Industrie" data-en="A Partner for<br/>Every Industry" data-bg="Партньор за<br/>Всяка Индустрия">
+      Un Partener pentru<br/>Orice Industrie
+    </h2>
+    <p class="reveal delay-2" style="color:rgba(255,255,255,0.65);font-size:0.95rem;max-width:580px;line-height:1.7;margin-bottom:4rem;font-weight:300;" data-ro="Fie că vorbim de florării, tehnică dentară sau e-commerce, sistemul și echipa noastră sunt în căutare de noi soluții de livrare cât mai eficientă — creând un ecosistem de distribuție adaptat fiecărui partener." data-en="Whether we're talking about florists, dental technology or e-commerce, our system and team are looking for new, more efficient delivery solutions — creating a distribution ecosystem adapted to each partner." data-bg="Независимо дали говорим за цветарници, дентална техника или е-търговия, нашата система и екип търсят нови, по-ефективни решения за доставка.">
+      Fie că vorbim de florării, tehnică dentară sau e-commerce, sistemul și echipa noastră sunt în căutare de noi soluții de livrare cât mai eficientă — creând un ecosistem de distribuție adaptat fiecărui partener.
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+      <div class="reveal" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:1.5rem;border-radius:2px;transition:all 0.3s;" onmouseover="this.style.background='rgba(201,168,76,0.12)';this.style.borderColor='rgba(201,168,76,0.4)'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div style="font-size:1.5rem;margin-bottom:0.75rem;">💊</div>
+        <div style="font-size:0.95rem;font-family:'Cormorant Garamond',serif;font-weight:600;color:white;margin-bottom:0.5rem;" data-ro="Farmacii & Clinici" data-en="Pharmacies & Clinics" data-bg="Аптеки и Клиники">Farmacii & Clinici</div>
+        <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);font-family:'DM Sans',sans-serif;" data-ro="Transport GDP certificat" data-en="GDP certified transport" data-bg="GDP сертифициран транспорт">Transport GDP certificat</div>
+      </div>
+      <div class="reveal delay-1" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:1.5rem;border-radius:2px;transition:all 0.3s;" onmouseover="this.style.background='rgba(201,168,76,0.12)';this.style.borderColor='rgba(201,168,76,0.4)'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div style="font-size:1.5rem;margin-bottom:0.75rem;">🌸</div>
+        <div style="font-size:0.95rem;font-family:'Cormorant Garamond',serif;font-weight:600;color:white;margin-bottom:0.5rem;" data-ro="Florării" data-en="Florists" data-bg="Цветарници">Florării</div>
+        <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);font-family:'DM Sans',sans-serif;" data-ro="Livrare în sub 60 minute" data-en="Delivery in under 60 minutes" data-bg="Доставка под 60 минути">Livrare în sub 60 minute</div>
+      </div>
+      <div class="reveal delay-2" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:1.5rem;border-radius:2px;transition:all 0.3s;" onmouseover="this.style.background='rgba(201,168,76,0.12)';this.style.borderColor='rgba(201,168,76,0.4)'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div style="font-size:1.5rem;margin-bottom:0.75rem;">🛒</div>
+        <div style="font-size:0.95rem;font-family:'Cormorant Garamond',serif;font-weight:600;color:white;margin-bottom:0.5rem;" data-ro="E-Commerce" data-en="E-Commerce" data-bg="Е-Търговия">E-Commerce</div>
+        <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);font-family:'DM Sans',sans-serif;" data-ro="Volum mare, cost optimizat" data-en="High volume, optimized cost" data-bg="Голям обем, оптимизирана цена">Volum mare, cost optimizat</div>
+      </div>
+      <div class="reveal delay-3" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:1.5rem;border-radius:2px;transition:all 0.3s;" onmouseover="this.style.background='rgba(201,168,76,0.12)';this.style.borderColor='rgba(201,168,76,0.4)'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div style="font-size:1.5rem;margin-bottom:0.75rem;">🦷</div>
+        <div style="font-size:0.95rem;font-family:'Cormorant Garamond',serif;font-weight:600;color:white;margin-bottom:0.5rem;" data-ro="Tehnică Dentară" data-en="Dental Technology" data-bg="Дентална Техника">Tehnică Dentară</div>
+        <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);font-family:'DM Sans',sans-serif;" data-ro="Piese fragile, manipulare atentă" data-en="Fragile parts, careful handling" data-bg="Крехки части, внимателно боравене">Piese fragile, manipulare atentă</div>
+      </div>
+      <div class="reveal delay-4" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:1.5rem;border-radius:2px;transition:all 0.3s;" onmouseover="this.style.background='rgba(201,168,76,0.12)';this.style.borderColor='rgba(201,168,76,0.4)'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div style="font-size:1.5rem;margin-bottom:0.75rem;">🍽️</div>
+        <div style="font-size:0.95rem;font-family:'Cormorant Garamond',serif;font-weight:600;color:white;margin-bottom:0.5rem;" data-ro="Restaurante & HoReCa" data-en="Restaurants & HoReCa" data-bg="Ресторанти и HoReCa">Restaurante & HoReCa</div>
+        <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);font-family:'DM Sans',sans-serif;" data-ro="Temperatură controlată HACCP" data-en="HACCP temperature controlled" data-bg="HACCP контролирана температура">Temperatură controlată HACCP</div>
+      </div>
+      <div class="reveal delay-4" style="background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);padding:1.5rem;border-radius:2px;transition:all 0.3s;" onmouseover="this.style.background='rgba(201,168,76,0.2)'" onmouseout="this.style.background='rgba(201,168,76,0.12)'">
+        <div style="font-size:1.5rem;margin-bottom:0.75rem;">+</div>
+        <div style="font-size:0.95rem;font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--gold);margin-bottom:0.5rem;" data-ro="Industria Ta" data-en="Your Industry" data-bg="Вашата Индустрия">Industria Ta</div>
+        <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);font-family:'DM Sans',sans-serif;" data-ro="Suntem deschiși oricărui parteneriat" data-en="We are open to any partnership" data-bg="Отворени сме за всяко партньорство">Suntem deschiși oricărui parteneriat</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ACOPERIRE
+═══════════════════════════════════════════════════════════ -->
+<section style="padding:7rem 0;background:white;">
+  <div style="max-width:1320px;margin:0 auto;padding:0 2rem;">
+    <div class="gold-label reveal" style="justify-content:center;">
+      <div class="gold-label-line"></div>
+      <span data-ro="Acoperire Geografică" data-en="Geographic Coverage" data-bg="Географско Покритие">Acoperire Geografică</span>
+      <div class="gold-label-line"></div>
+    </div>
+    <h2 class="reveal delay-1" style="font-size:clamp(2rem,4vw,3.5rem);color:#0f2d1a;text-align:center;margin-bottom:1rem;" data-ro="România + Bulgaria" data-en="Romania + Bulgaria" data-bg="Румъния + България">România + Bulgaria</h2>
+    <p class="reveal delay-2" style="color:#4a7a5a;text-align:center;font-size:0.95rem;max-width:500px;margin:0 auto 3rem;line-height:1.7;font-weight:300;" data-ro="Rețea națională în 14 orașe din România și prezență în Sofia și Plovdiv, Bulgaria." data-en="National network in 14 cities in Romania and presence in Sofia and Plovdiv, Bulgaria." data-bg="Национална мрежа в 14 града в Румъния и присъствие в София и Пловдив, България.">
+      Rețea națională în 14 orașe din România și prezență în Sofia și Plovdiv, Bulgaria.
+    </p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;" class="grid-2">
+      <div class="reveal">
+        <h3 style="font-size:1.1rem;color:#0f2d1a;margin-bottom:1.25rem;font-family:'Cormorant Garamond',serif;font-weight:600;" data-ro="România — 14 Orașe" data-en="Romania — 14 Cities" data-bg="Румъния — 14 Града">România — 14 Orașe</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+          <span style="background:var(--cream);border:1px solid #d1e7d9;padding:0.4rem 0.9rem;font-size:0.8rem;color:#166534;font-family:'DM Sans',sans-serif;border-radius:2px;">București</span>
+          <span style="background:var(--cream);border:1px solid #d1e7d9;padding:0.4rem 0.9rem;font-size:0.8rem;color:#166534;font-family:'DM Sans',sans-serif;border-radius:2px;">Constanța</span>
+          <span style="background:var(--cream);border:1px solid #d1e7d9;padding:0.4rem 0.9rem;font-size:0.8rem;color:#166534;font-family:'DM Sans',sans-serif;border-radius:2px;">Pitești</span>
+          <span style="background:var(--cream);border:1px solid #d1e7d9;padding:0.4rem 0.9rem;font-size:0.8rem;color:#166534;font-family:'DM Sans',sans-serif;border-radius:2px;">Ploiești</span>
+          <span style="background:var(--cream);border:1px solid #d1e7d9;padding:0.4rem 0.9rem;font-size:0.8rem;color:#166534;font-family:'DM Sans',sans-serif;border-radius:2px;">Brașov</span>
+          <span style="background:var(--cream);border:1px solid #d1e7d9;padding:0.4rem 0.9rem;font-size:0.8rem;color:#166534;font-family:'DM Sans',sans-serif;border-radius:2px;">Râmnicu Vâlcea</span>
+          <span style="background:var(--cream);border:1px solid #d1e7d9;padding:0.4rem 0.9rem;font-size:0.8rem;color:#166534;font-family:'DM Sans',sans-serif;border-radius:2px;">Sibiu</span>
+          <span style="background:var(--cream);border:1px solid #d1e7d9;padding:0.4rem 0.9rem;font-size:0.8rem;color:#166534;font-family:'DM Sans',sans-serif;border-radius:2px;">Cluj-Napoca</span>
+          <span style="background:var(--cream);border:1px solid #d1e7d9;padding:0.4rem 0.9rem;font-size:0.8rem;color:#166534;font-family:'DM Sans',sans-serif;border-radius:2px;">Oradea</span>
+          <span style="background:var(--cream);border:1px solid #d1e7d9;padding:0.4rem 0.9rem;font-size:0.8rem;color:#166534;font-family:'DM Sans',sans-serif;border-radius:2px;">Arad</span>
+          <span style="background:var(--cream);border:1px solid #d1e7d9;padding:0.4rem 0.9rem;font-size:0.8rem;color:#166534;font-family:'DM Sans',sans-serif;border-radius:2px;">Timișoara</span>
+          <span style="background:var(--cream);border:1px solid #d1e7d9;padding:0.4rem 0.9rem;font-size:0.8rem;color:#166534;font-family:'DM Sans',sans-serif;border-radius:2px;">Bacău</span>
+          <span style="background:var(--cream);border:1px solid #d1e7d9;padding:0.4rem 0.9rem;font-size:0.8rem;color:#166534;font-family:'DM Sans',sans-serif;border-radius:2px;">Iași</span>
+          <span style="background:var(--cream);border:1px solid #d1e7d9;padding:0.4rem 0.9rem;font-size:0.8rem;color:#166534;font-family:'DM Sans',sans-serif;border-radius:2px;">Craiova</span>
+        </div>
+      </div>
+      <div class="reveal delay-2">
+        <h3 style="font-size:1.1rem;color:#0f2d1a;margin-bottom:1.25rem;font-family:'Cormorant Garamond',serif;font-weight:600;" data-ro="Bulgaria — 2 Orașe" data-en="Bulgaria — 2 Cities" data-bg="България — 2 Града">Bulgaria — 2 Orașe</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+          <span style="background:#14532d;color:white;padding:0.4rem 0.9rem;font-size:0.8rem;font-family:'DM Sans',sans-serif;border-radius:2px;">Sofia</span>
+          <span style="background:#14532d;color:white;padding:0.4rem 0.9rem;font-size:0.8rem;font-family:'DM Sans',sans-serif;border-radius:2px;">Plovdiv</span>
+        </div>
+        <p style="margin-top:1.5rem;color:#4a7a5a;font-size:0.875rem;line-height:1.7;font-weight:300;" data-ro="Extindem constant rețeaua. Contactați-ne pentru disponibilitate în alte localități." data-en="We constantly expand our network. Contact us for availability in other locations." data-bg="Постоянно разширяваме мрежата си. Свържете се с нас за наличност в други места.">
+          Extindem constant rețeaua. Contactați-ne pentru disponibilitate în alte localități.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TESTIMONIALE
+═══════════════════════════════════════════════════════════ -->
+<section id="testimoniale" style="padding:7rem 0;background:#0f2d1a;">
+  <div style="max-width:1320px;margin:0 auto;padding:0 2rem;">
+    <div class="gold-label reveal">
+      <div class="gold-label-line"></div>
+      <span data-ro="Ce Spun Clienții" data-en="What Clients Say" data-bg="Какво Казват Клиентите">Ce Spun Clienții</span>
+    </div>
+    <div class="reveal delay-1" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:3rem;">
+      <h2 style="font-size:clamp(2rem,4vw,3.5rem);color:white;" data-ro="150 de Recenzii.<br/><span style='color:var(--gold)'>100% Recomandare.</span>" data-en="150 Reviews.<br/><span style='color:var(--gold)'>100% Recommendation.</span>" data-bg="150 Отзива.<br/><span style='color:var(--gold)'>100% Препоръка.</span>">
+        150 de Recenzii.<br/><span style="color:var(--gold)">100% Recomandare.</span>
+      </h2>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="display:flex;gap:4px;">★★★★★</div>
+        <span style="color:rgba(255,255,255,0.6);font-size:0.8rem;font-family:'DM Sans',sans-serif;" data-ro="Verificat pe Facebook" data-en="Verified on Facebook" data-bg="Проверено във Facebook">Verificat pe Facebook</span>
+      </div>
+    </div>
+
+    <div id="testimonialTrack" class="carousel-track reveal delay-2">
+      <!-- Cards injected by JS -->
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:2rem;">
+      <div id="testimonialDots" style="display:flex;gap:8px;"></div>
+      <div style="display:flex;gap:12px;">
+        <button onclick="prevTestimonial()" style="width:48px;height:48px;background:#1a3d26;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:2px;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+          <svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button onclick="nextTestimonial()" style="width:48px;height:48px;background:var(--gold);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:2px;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+          <svg width="20" height="20" fill="none" stroke="#0f2d1a" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="https://www.facebook.com/profile.php?id=61583906043382&sk=reviews" target="_blank" rel="noopener noreferrer" style="color:var(--gold);font-size:0.8rem;font-family:'DM Sans',sans-serif;letter-spacing:0.05em;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        <span data-ro="Citește toate cele 150 de recenzii pe Facebook" data-en="Read all 150 reviews on Facebook" data-bg="Прочетете всичките 150 отзива във Facebook">Citește toate cele 150 de recenzii pe Facebook</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CAREERS
+═══════════════════════════════════════════════════════════ -->
+<section style="padding:7rem 0;background:var(--cream);">
+  <div style="max-width:1320px;margin:0 auto;padding:0 2rem;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;" class="grid-2">
+      <div>
+        <div class="gold-label reveal">
+          <div class="gold-label-line"></div>
+          <span data-ro="Alătură-te Echipei" data-en="Join the Team" data-bg="Присъедини се към Екипа">Alătură-te Echipei</span>
+        </div>
+        <h2 class="reveal delay-1" style="font-size:clamp(2rem,3.5vw,3rem);color:#0f2d1a;margin-bottom:1.25rem;" data-ro="Construim Echipa<br/>Kiwi Mag" data-en="Building the<br/>Kiwi Mag Team" data-bg="Изграждаме Екипа<br/>Kiwi Mag">
+          Construim Echipa<br/>Kiwi Mag
+        </h2>
+        <p class="reveal delay-2" style="color:#4a7a5a;font-size:0.95rem;line-height:1.8;margin-bottom:2rem;font-weight:300;" data-ro="Căutăm curieri serioși, punctuali și orientați spre calitate. Angajați cu contract, nu colaboratori. Beneficii reale, echipament inclus." data-en="We are looking for serious, punctual and quality-oriented couriers. Employees with contract, not collaborators. Real benefits, equipment included." data-bg="Търсим сериозни, точни и ориентирани към качеството куриери. Служители с договор, не сътрудници.">
+          Căutăm curieri serioși, punctuali și orientați spre calitate. Angajați cu contract, nu colaboratori. Beneficii reale, echipament inclus.
+        </p>
+        <button class="btn-gold reveal delay-3" onclick="openCareers()" data-ro="Hai în Echipa Noastră" data-en="Join Our Team" data-bg="Присъедини се към Нашия Екип">Hai în Echipa Noastră</button>
+      </div>
+      <div class="reveal delay-2">
+        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663472279751/EnSAY3DRcdYRBoHXxYc9HM/kiwimag-scooter-exact-logo_10e66b22.png" alt="Curier KiwiMag pe scuter" style="width:100%;border-radius:2px;box-shadow:0 12px 40px rgba(20,83,45,0.15);" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════════════════════════ -->
+<section id="contact" style="padding:7rem 0;background:white;">
+  <div style="max-width:1320px;margin:0 auto;padding:0 2rem;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;" class="grid-2">
+      <div>
+        <div class="gold-label reveal">
+          <div class="gold-label-line"></div>
+          <span data-ro="Contact" data-en="Contact" data-bg="Контакт">Contact</span>
+        </div>
+        <h2 class="reveal delay-1" style="font-size:clamp(2rem,3.5vw,3rem);color:#0f2d1a;margin-bottom:1rem;" data-ro="Mereu la Dispoziție" data-en="Always Available" data-bg="Винаги на Разположение">Mereu la Dispoziție</h2>
+        <p class="reveal delay-2" style="color:#4a7a5a;font-size:0.95rem;line-height:1.8;margin-bottom:2.5rem;font-weight:300;" data-ro="Suntem gata să devenim partenerul dumneavoastră de încredere. Contactați-ne pentru o ofertă personalizată." data-en="We are ready to become your trusted partner. Contact us for a personalized offer." data-bg="Готови сме да станем вашият доверен партньор. Свържете се с нас за персонализирана оферта.">
+          Suntem gata să devenim partenerul dumneavoastră de încredere. Contactați-ne pentru o ofertă personalizată.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:1.5rem;">
+          <div class="reveal delay-3" style="display:flex;align-items:flex-start;gap:1rem;">
+            <div style="width:44px;height:44px;background:rgba(22,101,52,0.08);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" fill="none" stroke="#166534" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            </div>
+            <div>
+              <div style="font-size:0.7rem;color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',sans-serif;margin-bottom:4px;" data-ro="Telefon" data-en="Phone" data-bg="Телефон">Telefon</div>
+              <a href="tel:+40741699028" style="color:#0f2d1a;font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;text-decoration:none;">+40 741 699 028</a>
+            </div>
+          </div>
+          <div class="reveal delay-3" style="display:flex;align-items:flex-start;gap:1rem;">
+            <div style="width:44px;height:44px;background:rgba(22,101,52,0.08);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" fill="none" stroke="#166534" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <div style="font-size:0.7rem;color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',sans-serif;margin-bottom:4px;">Email</div>
+              <a href="mailto:sdumitru@kiwimaglogistic.com" style="color:#0f2d1a;font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;text-decoration:none;">sdumitru@kiwimaglogistic.com</a>
+            </div>
+          </div>
+          <div class="reveal delay-4" style="display:flex;align-items:flex-start;gap:1rem;">
+            <div style="width:44px;height:44px;background:rgba(22,101,52,0.08);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" fill="none" stroke="#166534" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <div style="font-size:0.7rem;color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',sans-serif;margin-bottom:4px;" data-ro="Sediu" data-en="Headquarters" data-bg="Централа">Sediu</div>
+              <div style="color:#0f2d1a;font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;">București, România</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="reveal delay-2">
+        <form id="contactForm" onsubmit="submitContact(event)" style="display:flex;flex-direction:column;gap:1.25rem;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div class="form-field" style="margin-bottom:0;">
+              <label class="form-label" data-ro="Nume *" data-en="Name *" data-bg="Име *">Nume *</label>
+              <input type="text" id="c_name" required class="form-input" placeholder="Ion Popescu" />
+            </div>
+            <div class="form-field" style="margin-bottom:0;">
+              <label class="form-label" data-ro="Companie *" data-en="Company *" data-bg="Компания *">Companie *</label>
+              <input type="text" id="c_company" required class="form-input" placeholder="Firma SRL" />
+            </div>
+          </div>
+          <div class="form-field" style="margin-bottom:0;">
+            <label class="form-label" data-ro="Telefon *" data-en="Phone *" data-bg="Телефон *">Telefon *</label>
+            <input type="tel" id="c_phone" required class="form-input" placeholder="+40 7xx xxx xxx" />
+          </div>
+          <div class="form-field" style="margin-bottom:0;">
+            <label class="form-label">Email</label>
+            <input type="email" id="c_email" class="form-input" placeholder="email@companie.ro" />
+          </div>
+          <div class="form-field" style="margin-bottom:0;">
+            <label class="form-label" data-ro="Mesaj *" data-en="Message *" data-bg="Съобщение *">Mesaj *</label>
+            <textarea id="c_message" required class="form-textarea" placeholder="Descrieți pe scurt nevoile dvs. de livrare..."></textarea>
+          </div>
+          <div id="contactSuccess" style="display:none;background:rgba(22,101,52,0.08);border:1px solid #d1e7d9;padding:1rem;border-radius:2px;color:#166534;font-size:0.875rem;font-family:'DM Sans',sans-serif;text-align:center;" data-ro="Mesaj trimis cu succes! Vă vom contacta în cel mai scurt timp." data-en="Message sent successfully! We will contact you shortly." data-bg="Съобщението е изпратено успешно! Ще се свържем с вас скоро.">
+            Mesaj trimis cu succes! Vă vom contacta în cel mai scurt timp.
+          </div>
+          <div id="contactError" style="display:none;background:rgba(220,38,38,0.08);border:1px solid #fca5a5;padding:1rem;border-radius:2px;color:#dc2626;font-size:0.875rem;font-family:'DM Sans',sans-serif;text-align:center;">
+            A apărut o eroare. Contactați-ne direct la sdumitru@kiwimaglogistic.com
+          </div>
+          <button type="submit" id="contactSubmitBtn" class="btn-gold" style="width:100%;" data-ro="Trimite Mesajul" data-en="Send Message" data-bg="Изпрати Съобщение">Trimite Mesajul</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════ -->
+<footer class="section-dark" style="padding:4rem 0 2rem;">
+  <div style="max-width:1320px;margin:0 auto;padding:0 2rem;">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:3rem;" class="grid-3">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.25rem;">
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663472279751/EnSAY3DRcdYRBoHXxYc9HM/kiwimag-logo_1022d881.jpeg" alt="Logo" style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(201,168,76,0.5);object-fit:contain;" />
+          <div>
+            <div style="color:white;font-weight:600;letter-spacing:0.15em;font-size:0.85rem;text-transform:uppercase;font-family:'DM Sans',sans-serif;">Kiwi Mag</div>
+            <div style="color:var(--gold);font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',sans-serif;">Delivery</div>
+          </div>
+        </div>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.875rem;line-height:1.7;max-width:320px;font-weight:300;font-family:'DM Sans',sans-serif;" data-ro="Servicii de curierat B2B cu angajați proprii, standarde certificate și acoperire națională. Partenerul de livrare în care poți avea încredere." data-en="B2B courier services with own employees, certified standards and national coverage. The delivery partner you can trust." data-bg="B2B куриерски услуги със собствени служители, сертифицирани стандарти и национално покритие.">
+          Servicii de curierat B2B cu angajați proprii, standarde certificate și acoperire națională. Partenerul de livrare în care poți avea încredere.
+        </p>
+        <div style="display:flex;gap:12px;margin-top:1.5rem;">
+          <a href="https://www.facebook.com/profile.php?id=61583906043382" target="_blank" style="width:36px;height:36px;background:rgba(255,255,255,0.08);border-radius:2px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.6);text-decoration:none;transition:all 0.3s;" onmouseover="this.style.background='rgba(201,168,76,0.2)';this.style.color='var(--gold)'" onmouseout="this.style.background='rgba(255,255,255,0.08)';this.style.color='rgba(255,255,255,0.6)'">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://wa.me/40741699028" target="_blank" style="width:36px;height:36px;background:rgba(255,255,255,0.08);border-radius:2px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.6);text-decoration:none;transition:all 0.3s;" onmouseover="this.style.background='rgba(201,168,76,0.2)';this.style.color='var(--gold)'" onmouseout="this.style.background='rgba(255,255,255,0.08)';this.style.color='rgba(255,255,255,0.6)'">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:white;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',sans-serif;margin-bottom:1.25rem;" data-ro="Navigare" data-en="Navigation" data-bg="Навигация">Navigare</h4>
+        <div style="display:flex;flex-direction:column;gap:0.75rem;">
+          <a onclick="scrollTo('servicii')" style="color:rgba(255,255,255,0.5);font-size:0.875rem;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'" data-ro="Servicii" data-en="Services" data-bg="Услуги">Servicii</a>
+          <a onclick="scrollTo('tehnologie')" style="color:rgba(255,255,255,0.5);font-size:0.875rem;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'" data-ro="Tehnologie" data-en="Technology" data-bg="Технология">Tehnologie</a>
+          <a onclick="scrollTo('preturi')" style="color:rgba(255,255,255,0.5);font-size:0.875rem;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'" data-ro="Prețuri" data-en="Pricing" data-bg="Цени">Prețuri</a>
+          <a onclick="scrollTo('industrii')" style="color:rgba(255,255,255,0.5);font-size:0.875rem;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'" data-ro="Industrii" data-en="Industries" data-bg="Индустрии">Industrii</a>
+          <a onclick="scrollTo('contact')" style="color:rgba(255,255,255,0.5);font-size:0.875rem;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'" data-ro="Contact" data-en="Contact" data-bg="Контакт">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:white;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',sans-serif;margin-bottom:1.25rem;" data-ro="Contact Rapid" data-en="Quick Contact" data-bg="Бърз Контакт">Contact Rapid</h4>
+        <div style="display:flex;flex-direction:column;gap:0.75rem;">
+          <a href="tel:+40741699028" style="color:rgba(255,255,255,0.5);font-size:0.875rem;font-family:'DM Sans',sans-serif;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">+40 741 699 028</a>
+          <a href="mailto:sdumit
+ru@kiwimaglogistic.com" style="color:rgba(255,255,255,0.5);font-size:0.875rem;font-family:'DM Sans',sans-serif;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">sdumitru@kiwimaglogistic.com</a>
+          <a href="https://wa.me/40741699028" target="_blank" style="color:rgba(255,255,255,0.5);font-size:0.875rem;font-family:'DM Sans',sans-serif;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="gold-line" style="margin-bottom:1.5rem;"></div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;">
+      <p style="color:rgba(255,255,255,0.3);font-size:0.75rem;font-family:'DM Sans',sans-serif;">© 2025 Kiwi Mag Delivery. Toate drepturile rezervate.</p>
+      <p style="color:rgba(255,255,255,0.3);font-size:0.75rem;font-family:'DM Sans',sans-serif;" data-ro="Servicii de curierat B2B cu angajați proprii" data-en="B2B courier services with own employees" data-bg="B2B куриерски услуги със собствени служители">Servicii de curierat B2B cu angajați proprii</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════
+     WHATSAPP FLOAT
+═══════════════════════════════════════════════════════════ -->
+<a href="https://wa.me/40741699028" target="_blank" class="whatsapp-float" title="WhatsApp">
+  <svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ═══════════════════════════════════════════════════════════
+     MODAL ANGAJARE
+═══════════════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="careersModal">
+  <div class="modal-bg" onclick="closeCareers()"></div>
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <h3 style="color:white;font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;" data-ro="Hai în Echipa Kiwi Mag" data-en="Join the Kiwi Mag Team" data-bg="Присъедини се към Екипа Kiwi Mag">Hai în Echipa Kiwi Mag</h3>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.75rem;font-family:'DM Sans',sans-serif;margin-top:4px;" data-ro="Completează formularul și te contactăm noi" data-en="Fill in the form and we will contact you" data-bg="Попълни формуляра и ние ще се свържем с теб">Completează formularul și te contactăm noi</p>
+      </div>
+      <button class="modal-close" onclick="closeCareers()">×</button>
+    </div>
+    <div style="padding:2rem;">
+      <form id="careersForm" onsubmit="submitCareers(event)">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem;">
+          <div class="form-field" style="margin-bottom:0;">
+            <label class="form-label" data-ro="Nume Complet *" data-en="Full Name *" data-bg="Пълно Име *">Nume Complet *</label>
+            <input type="text" id="j_name" required class="form-input" placeholder="Ion Popescu" />
+          </div>
+          <div class="form-field" style="margin-bottom:0;">
+            <label class="form-label" data-ro="Vârstă *" data-en="Age *" data-bg="Възраст *">Vârstă *</label>
+            <input type="number" id="j_age" required min="18" max="65" class="form-input" placeholder="25" />
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem;">
+          <div class="form-field" style="margin-bottom:0;">
+            <label class="form-label" data-ro="Telefon *" data-en="Phone *" data-bg="Телефон *">Telefon *</label>
+            <input type="tel" id="j_phone" required class="form-input" placeholder="+40 7xx xxx xxx" />
+          </div>
+          <div class="form-field" style="margin-bottom:0;">
+            <label class="form-label">Email</label>
+            <input type="email" id="j_email" class="form-input" placeholder="email@gmail.com" />
+          </div>
+        </div>
+        <div class="form-field">
+          <label class="form-label" data-ro="Oraș *" data-en="City *" data-bg="Град *">Oraș *</label>
+          <select id="j_city" required class="form-select">
+            <option value="" data-ro="Selectează orașul" data-en="Select city" data-bg="Избери град">Selectează orașul</option>
+            <option>București</option><option>Constanța</option><option>Pitești</option>
+            <option>Ploiești</option><option>Brașov</option><option>Râmnicu Vâlcea</option>
+            <option>Sibiu</option><option>Cluj-Napoca</option><option>Oradea</option>
+            <option>Arad</option><option>Timișoara</option><option>Bacău</option>
+            <option>Iași</option><option>Craiova</option><option>Sofia</option><option>Plovdiv</option>
+          </select>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem;">
+          <div class="form-field" style="margin-bottom:0;">
+            <label class="form-label" data-ro="Disponibilitate Ture *" data-en="Shift Availability *" data-bg="Наличност за Смени *">Disponibilitate Ture *</label>
+            <select id="j_shifts" required class="form-select">
+              <option value="" data-ro="Selectează" data-en="Select" data-bg="Избери">Selectează</option>
+              <option value="zi" data-ro="Doar ziua" data-en="Day only" data-bg="Само денем">Doar ziua</option>
+              <option value="noapte" data-ro="Doar noaptea" data-en="Night only" data-bg="Само нощем">Doar noaptea</option>
+              <option value="ambele" data-ro="Ambele ture" data-en="Both shifts" data-bg="И двете смени">Ambele ture</option>
+            </select>
+          </div>
+          <div class="form-field" style="margin-bottom:0;">
+            <label class="form-label" data-ro="Disponibil Weekend? *" data-en="Available Weekends? *" data-bg="Наличен уикенд? *">Disponibil Weekend? *</label>
+            <select id="j_weekend" required class="form-select">
+              <option value="" data-ro="Selectează" data-en="Select" data-bg="Избери">Selectează</option>
+              <option value="da" data-ro="Da, disponibil" data-en="Yes, available" data-bg="Да, наличен">Da, disponibil</option>
+              <option value="nu" data-ro="Nu" data-en="No" data-bg="Не">Nu</option>
+              <option value="partial" data-ro="Parțial" data-en="Partially" data-bg="Частично">Parțial</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label class="form-label" data-ro="Așteptări Salariale (RON/lună)" data-en="Salary Expectations (RON/month)" data-bg="Очаквания за Заплата (RON/месец)">Așteptări Salariale (RON/lună)</label>
+          <input type="text" id="j_salary" class="form-input" placeholder="ex: 3500 RON" />
+        </div>
+        <div class="form-field">
+          <label class="form-label" data-ro="Scurtă Descriere despre Tine *" data-en="Brief Description about You *" data-bg="Кратко Описание за Теб *">Scurtă Descriere despre Tine *</label>
+          <textarea id="j_description" required class="form-textarea" placeholder="Spune-ne câteva cuvinte despre experiența ta, motivația de a lucra cu noi..."></textarea>
+        </div>
+        <div id="careersSuccess" style="display:none;background:rgba(22,101,52,0.08);border:1px solid #d1e7d9;padding:1rem;border-radius:2px;color:#166534;font-size:0.875rem;font-family:'DM Sans',sans-serif;text-align:center;margin-bottom:1rem;" data-ro="Aplicație trimisă cu succes! Te vom contacta în curând." data-en="Application sent successfully! We will contact you soon." data-bg="Заявлението е изпратено успешно! Ще се свържем с теб скоро.">
+          Aplicație trimisă cu succes! Te vom contacta în curând.
+        </div>
+        <div id="careersError" style="display:none;background:rgba(220,38,38,0.08);border:1px solid #fca5a5;padding:1rem;border-radius:2px;color:#dc2626;font-size:0.875rem;font-family:'DM Sans',sans-serif;text-align:center;margin-bottom:1rem;">
+          A apărut o eroare. Contactați-ne la sdumitru@kiwimaglogistic.com
+        </div>
+        <button type="submit" id="careersSubmitBtn" class="btn-gold" style="width:100%;" data-ro="Trimite Aplicația" data-en="Submit Application" data-bg="Изпрати Заявлението">Trimite Aplicația</button>
+      </form>
+    </div>
+  </div>
 </div>
 
+<!-- ═══════════════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════════════ -->
+<script>
+// ── LANGUAGE SYSTEM ──────────────────────────────────────────
+let currentLang = 'ro';
+function setLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+    const val = el.getAttribute('data-' + lang);
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      el.placeholder = val;
+    } else if (el.tagName === 'BUTTON' || el.tagName === 'A' || el.tagName === 'SPAN' || el.tagName === 'DIV' || el.tagName === 'P' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'H4' || el.tagName === 'LI') {
+      el.innerHTML = val;
+    }
+  });
+  document.querySelectorAll('.lang-option').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
+  });
+  document.getElementById('langBtn').textContent = lang.toUpperCase() + ' ▾';
+  closeLangDropdown();
+}
+function toggleLangDropdown() {
+  document.getElementById('langDropdown').classList.toggle('open');
+}
+function closeLangDropdown() {
+  document.getElementById('langDropdown').classList.remove('open');
+}
+document.addEventListener('click', e => {
+  if (!e.target.closest('#langBtn') && !e.target.closest('#langDropdown')) closeLangDropdown();
+});
 
-            <div class="text-center mt-8">
-                <p class="text-sm text-gray-600">
-                    * Prețurile sunt exprimate în RON și nu includ TVA. Pot fi influențate de distanță și condiții speciale.
-                </p>
-            </div>
+// ── NAVBAR SCROLL ─────────────────────────────────────────────
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  if (window.scrollY > 60) {
+    nav.classList.remove('top');
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+    nav.classList.add('top');
+  }
+});
+
+// ── SMOOTH SCROLL ─────────────────────────────────────────────
+function scrollTo(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ── MOBILE MENU ───────────────────────────────────────────────
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// ── REVEAL ON SCROLL ──────────────────────────────────────────
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── COUNTER ANIMATION ─────────────────────────────────────────
+function animateCounter(el) {
+  const target = parseInt(el.getAttribute('data-target'));
+  const suffix = el.getAttribute('data-suffix') || '';
+  let current = 0;
+  const duration = 1800;
+  const step = target / (duration / 16);
+  const timer = setInterval(() => {
+    current += step;
+    if (current >= target) {
+      current = target;
+      clearInterval(timer);
+    }
+    el.textContent = Math.floor(current) + suffix;
+  }, 16);
+}
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounter(entry.target);
+      counterObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
+
+// ── TESTIMONIALS ──────────────────────────────────────────────
+const testimonials = [
+  { name: "Andreea M.", text: "Serviciu impecabil! Livrarea a ajuns în timp record și curierii sunt foarte profesioniști. Recomand cu căldură!", stars: 5 },
+  { name: "Mihai C.", text: "Colaborăm cu KiwiMag de câteva luni și suntem extrem de mulțumiți. Punctualitate și seriozitate la cel mai înalt nivel.", stars: 5 },
+  { name: "Elena P.", text: "Cea mai bună experiență de livrare! Tracking în timp real, curier amabil și coletul a ajuns în perfectă stare.", stars: 5 },
+  { name: "Bogdan T.", text: "Recomand 100%! Servicii de top, prețuri corecte și o echipă dedicată. Exact ce aveam nevoie pentru afacerea mea.", stars: 5 },
+  { name: "Cristina V.", text: "Am folosit serviciile KiwiMag pentru livrări urgente și nu m-au dezamăgit niciodată. Profesioniști adevărați!", stars: 5 },
+  { name: "Alexandru D.", text: "Excelent! Livrare rapidă, curier politicos și aplicația de tracking funcționează perfect. Voi folosi în continuare.", stars: 5 },
+  { name: "Maria I.", text: "Servicii de calitate superioară! Coletele ajung mereu în timp și în condiții perfecte. Mulțumesc echipei KiwiMag!", stars: 5 },
+  { name: "Radu N.", text: "Parteneriat de încredere pentru firma noastră. Livrări B2B gestionate profesional, cu raportare clară.", stars: 5 },
+  { name: "Ioana S.", text: "Impresionant! De la prima comandă am știut că am găsit partenerul potrivit. Rapiditate și seriozitate exemplară.", stars: 5 },
+  { name: "Florin G.", text: "KiwiMag a transformat complet logistica noastră. Recomand oricărei firme care vrea un curier de încredere.", stars: 5 },
+];
+
+let testimonialIdx = 0;
+const perPage = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+
+function renderTestimonials() {
+  const track = document.getElementById('testimonialTrack');
+  const dots = document.getElementById('testimonialDots');
+  const pages = Math.ceil(testimonials.length / perPage);
+  const start = testimonialIdx * perPage;
+  const visible = testimonials.slice(start, start + perPage);
+
+  track.innerHTML = visible.map((t, i) => `
+    <div class="testimonial-card ${i === 1 && perPage === 3 ? 'center' : 'side'}" style="${i === 1 && perPage === 3 ? 'background:var(--gold);' : 'background:#1a3d26;'}">
+      <div>
+        <div style="display:flex;gap:4px;margin-bottom:1rem;color:${i === 1 && perPage === 3 ? '#0f2d1a' : 'var(--gold)'};">★★★★★</div>
+        <p style="font-size:0.9rem;line-height:1.7;color:${i === 1 && perPage === 3 ? '#0f2d1a' : 'rgba(255,255,255,0.85)'};font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.05rem;">"${t.text}"</p>
+      </div>
+      <div style="margin-top:1.5rem;display:flex;align-items:center;gap:10px;">
+        <div style="width:36px;height:36px;background:${i === 1 && perPage === 3 ? 'rgba(15,45,26,0.2)' : 'rgba(201,168,76,0.2)'};border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:600;color:${i === 1 && perPage === 3 ? '#0f2d1a' : 'var(--gold)'};">${t.name.charAt(0)}</div>
+        <div>
+          <div style="font-family:'DM Sans',sans-serif;font-size:0.8rem;font-weight:600;color:${i === 1 && perPage === 3 ? '#0f2d1a' : 'white'};">${t.name}</div>
+          <div style="font-family:'DM Sans',sans-serif;font-size:0.7rem;color:${i === 1 && perPage === 3 ? 'rgba(15,45,26,0.6)' : 'rgba(255,255,255,0.4)'};">Client verificat Facebook</div>
         </div>
-    </section>
+      </div>
+    </div>
+  `).join('');
 
-    <!-- Industrii Section -->
-    <section id="industrii" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="section-title text-4xl font-bold mb-4">Industrii Servite</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Soluții specializate pentru diverse sectoare de activitate
-                </p>
-            </div>
+  dots.innerHTML = Array.from({length: pages}, (_, i) => `
+    <button onclick="goToTestimonial(${i})" style="width:${i === testimonialIdx ? '24px' : '8px'};height:8px;background:${i === testimonialIdx ? 'var(--gold)' : 'rgba(255,255,255,0.2)'};border:none;border-radius:4px;cursor:pointer;transition:all 0.3s;"></button>
+  `).join('');
+}
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
-                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-2xl">🌸</span>
-                    </div>
-                    <h3 class="font-semibold mb-2">Florării</h3>
-                    <p class="text-sm text-gray-600">
-                        Livrări rapide pentru aranjamente florale, păstrând frumusețea și starea inițială.
-                    </p>
-                </div>
+function nextTestimonial() {
+  const pages = Math.ceil(testimonials.length / perPage);
+  testimonialIdx = (testimonialIdx + 1) % pages;
+  renderTestimonials();
+}
+function prevTestimonial() {
+  const pages = Math.ceil(testimonials.length / perPage);
+  testimonialIdx = (testimonialIdx - 1 + pages) % pages;
+  renderTestimonials();
+}
+function goToTestimonial(i) {
+  testimonialIdx = i;
+  renderTestimonials();
+}
 
-                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-2xl">⚖️</span>
-                    </div>
-                    <h3 class="font-semibold mb-2">Cabinete de Avocatură</h3>
-                    <p class="text-sm text-gray-600">
-                        Ridicarea și livrarea documentelor confidențiale, asigurând integritatea acestora.
-                    </p>
-                </div>
+setInterval(nextTestimonial, 5000);
+renderTestimonials();
 
-                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
-                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-2xl">🏥</span>
-                    </div>
-                    <h3 class="font-semibold mb-2">Clinici Medicale</h3>
-                    <p class="text-sm text-gray-600">
-                        Livrări de documente, mostre medicale cu respectarea condițiilor de igienă.
-                    </p>
-                </div>
+// ── MODAL CAREERS ─────────────────────────────────────────────
+function openCareers() {
+  document.getElementById('careersModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeCareers() {
+  document.getElementById('careersModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
 
-                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
-                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-2xl">🍽️</span>
-                    </div>
-                    <h3 class="font-semibold mb-2">Restaurante</h3>
-                    <p class="text-sm text-gray-600">
-                        Transport eficient pentru comenzi de mâncare, asigurând cel mai mic timp de livrare.
-                    </p>
-                </div>
+// ── EMAILJS SUBMIT CONTACT ────────────────────────────────────
+function submitContact(e) {
+  e.preventDefault();
+  const btn = document.getElementById('contactSubmitBtn');
+  btn.textContent = 'Se trimite...';
+  btn.disabled = true;
 
-                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
-                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-2xl">🛒</span>
-                    </div>
-                    <h3 class="font-semibold mb-2">Magazine Online</h3>
-                    <p class="text-sm text-gray-600">
-                        Soluții flexibile pentru livrarea produselor către clienți finali.
-                    </p>
-                </div>
+  emailjs.send('service_emplyer123', 'template_6g732tg', {
+    from_name: document.getElementById('c_name').value,
+    company: document.getElementById('c_company').value,
+    phone: document.getElementById('c_phone').value,
+    email: document.getElementById('c_email').value,
+    message: document.getElementById('c_message').value,
+    to_email: 'sdumitru@kiwimaglogistic.com'
+  }).then(() => {
+    document.getElementById('contactSuccess').style.display = 'block';
+    document.getElementById('contactError').style.display = 'none';
+    document.getElementById('contactForm').reset();
+    btn.textContent = 'Trimite Mesajul';
+    btn.disabled = false;
+  }).catch(() => {
+    document.getElementById('contactError').style.display = 'block';
+    document.getElementById('contactSuccess').style.display = 'none';
+    btn.textContent = 'Trimite Mesajul';
+    btn.disabled = false;
+  });
+}
 
-                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
-                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-2xl">🔧</span>
-                    </div>
-                    <h3 class="font-semibold mb-2">Service-uri Auto</h3>
-                    <p class="text-sm text-gray-600">
-                        Transportul pieselor și componentelor auto, optimizat pentru timp și eficiență.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+// ── EMAILJS SUBMIT CAREERS ────────────────────────────────────
+function submitCareers(e) {
+  e.preventDefault();
+  const btn = document.getElementById('careersSubmitBtn');
+  btn.textContent = 'Se trimite...';
+  btn.disabled = true;
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="section-title text-4xl font-bold mb-4">Mereu la Dispoziție!</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Suntem gata să devenim partenerul dumneavoastră de încredere pentru toate nevoile de livrare
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
-                    <div class="w-16 h-16 whatsapp-btn rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fab fa-whatsapp text-white text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold mb-2">WhatsApp Business</h3>
-                    <p class="text-lg font-medium text-primary mb-4">+40 741 699 028</p>
-                    <button class="whatsapp-btn text-white px-6 py-2 rounded-md font-medium" onclick="openWhatsApp()">
-                        Scrie-ne pe WhatsApp
-                    </button>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-envelope text-primary text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold mb-2">E-mail</h3>
-                    <p class="text-lg font-medium text-primary mb-4">contact@kiwimag.logistic.com</p>
-                    <button class="btn-outline" onclick="openEmail()">
-                        Trimite-ne un e-mail
-                    </button>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-phone text-primary text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold mb-2">Solicită o Întâlnire</h3>
-                    <p class="text-sm text-gray-600 mb-4">
-                        Contactați-ne pentru a discuta cum vă putem optimiza operațiunile
-                    </p>
-                    <button 
-    class="btn-outline"
-    onclick="openWhatsAppOrder()"
->
-    Programează Întâlnire
-  
-                    </button>
-                </div>
-            </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-100 py-12">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="flex items-center space-x-2 mb-4 md:mb-0">
-                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                        <i class="fas fa-truck text-white text-sm"></i>
-                    </div>
-                    <span class="text-xl font-bold gradient-text">KiwiMag Delivery</span>
-                </div>
-                
-                <div class="text-center md:text-right">
-                    <p class="text-sm text-gray-600 mb-2">
-                        Fiecare Pachet, Fiecare Promisiune - Livrată
-                    </p>
-                    <p class="text-xs text-gray-500">
-                        © 2024 KiwiMag Logistic. Toate drepturile rezervate.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- EMBEDDED JAVASCRIPT -->
-    <script>
-        // KiwiMag Logistic - Complete JavaScript Functionality
-
-        // Configuration
-        const CONFIG = {
-            whatsappNumber: '40741699028',
-            email: 'office@kiwimag.logistic.com',
-            companyName: 'KiwiMag Logistic'
-        };
-
-        // WhatsApp Functions
-        function openWhatsApp() {
-            const message = encodeURIComponent("Bună ziua! Oferta dumneavoastră prezintă interes. Care sunt următorii pași?");
-            const whatsappUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${message}`;
-            window.open(whatsappUrl, '_blank');
-            trackEvent('whatsapp_click', { type: 'header_button' });
-        }
-
-        function openWhatsAppOrder() {
-            const message = encodeURIComponent("Bună ziua! Dorim să testăm serviciul Dvs. Cum putem comanda o cursă?");
-            const whatsappUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${message}`;
-            window.open(whatsappUrl, '_blank');
-            trackEvent('whatsapp_click', { type: 'order_button' });
-        }
-
-        // Email Function
-        function openEmail() {
-            const subject = encodeURIComponent(`Solicitare informații servicii ${CONFIG.companyName}`);
-            const body = encodeURIComponent(`Bună ziua,
-
-Sunt interesat de serviciile dumneavoastră de livrare și transport. Vă rog să îmi oferiți mai multe detalii despre:
-
-- Serviciile disponibile în zona mea
-- Prețurile și pachetele oferite
-- Modalitățile de colaborare
-
-Mulțumesc!
-
-Cu stimă`);
-            
-            const mailtoUrl = `mailto:${CONFIG.email}?subject=${subject}&body=${body}`;
-            window.location.href = mailtoUrl;
-            trackEvent('email_click');
-        }
-
-        // Utility Functions
-        function debounce(func, wait) {
-            let timeout;
-            return function executedFunction(...args) {
-                const later = () => {
-                    clearTimeout(timeout);
-                    func(...args);
-                };
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-            };
-        }
-
-        function throttle(func, limit) {
-            let inThrottle;
-            return function() {
-                const args = arguments;
-                const context = this;
-                if (!inThrottle) {
-                    func.apply(context, args);
-                    inThrottle = true;
-                    setTimeout(() => inThrottle = false, limit);
-                }
-            }
-        }
-
-        // Analytics and Tracking
-        function trackEvent(eventName, eventData = {}) {
-            // Google Analytics 4
-            if (typeof gtag !== 'undefined') {
-                gtag('event', eventName, {
-                    ...eventData,
-                    page_location: window.location.href,
-                    page_title: document.title
-                });
-            }
-            
-            // Facebook Pixel
-            if (typeof fbq !== 'undefined') {
-                fbq('track', eventName, eventData);
-            }
-            
-            // Custom Analytics
-            console.log('Event tracked:', eventName, eventData);
-        }
-
-        // Smooth Scrolling
-        function initSmoothScrolling() {
-            const navLinks = document.querySelectorAll('a[href^="#"]');
-            
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    const targetSection = document.querySelector(targetId);
-                    
-                    if (targetSection) {
-                        const header = document.querySelector('header');
-                        const headerHeight = header ? header.offsetHeight : 0;
-                        const targetPosition = targetSection.offsetTop - headerHeight - 20;
-                        
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Close mobile menu if open
-                        const mobileMenu = document.querySelector('.mobile-menu');
-                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                            mobileMenu.classList.add('hidden');
-                        }
-                        
-                        trackEvent('navigation_click', { target: targetId });
-                    }
-                });
-            });
-        }
-
-        // Header Scroll Effects
-        function initHeaderEffects() {
-            const header = document.querySelector('header');
-            if (!header) return;
-            
-            let lastScrollTop = 0;
-            let ticking = false;
-            
-            const updateHeader = () => {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                
-                if (scrollTop > 100) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-                
-                lastScrollTop = scrollTop;
-                ticking = false;
-            };
-            
-            const requestTick = () => {
-                if (!ticking) {
-                    requestAnimationFrame(updateHeader);
-                    ticking = true;
-                }
-            };
-            
-            window.addEventListener('scroll', requestTick);
-        }
-
-        // Mobile Menu
-        function initMobileMenu() {
-            const mobileMenuButton = document.querySelector('.mobile-menu-button');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('hidden');
-                    
-                    // Update button icon
-                    const icon = this.querySelector('i');
-                    if (icon) {
-                        if (mobileMenu.classList.contains('hidden')) {
-                            icon.className = 'fas fa-bars text-xl';
-                        } else {
-                            icon.className = 'fas fa-times text-xl';
-                        }
-                    }
-                    
-                    trackEvent('mobile_menu_toggle', { 
-                        action: mobileMenu.classList.contains('hidden') ? 'close' : 'open' 
-                    });
-                });
-                
-                // Close menu when clicking outside
-                document.addEventListener('click', function(e) {
-                    if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
-                        mobileMenu.classList.add('hidden');
-                        const icon = mobileMenuButton.querySelector('i');
-                        if (icon) {
-                            icon.className = 'fas fa-bars text-xl';
-                        }
-                    }
-                });
-            }
-        }
-
-        // Intersection Observer for Animations
-        function initScrollAnimations() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-in');
-                        
-                        // Track section views
-                        const sectionId = entry.target.id;
-                        if (sectionId) {
-                            trackEvent('section_view', { section: sectionId });
-                        }
-                    }
-                });
-            }, observerOptions);
-            
-            // Observe sections and cards
-            const animatedElements = document.querySelectorAll('.card-hover, section[id]');
-            animatedElements.forEach(el => {
-                observer.observe(el);
-            });
-        }
-
-        // Lazy Loading for Images
-        function initLazyLoading() {
-            const images = document.querySelectorAll('img[data-src]');
-            
-            if (images.length === 0) return;
-            
-            const imageObserver = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('image-loading');
-                        img.classList.add('loaded');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-            
-            images.forEach(img => {
-                img.classList.add('image-loading');
-                imageObserver.observe(img);
-            });
-        }
-
-        // Notifications
-        function showNotification(message, type = 'info', duration = 5000) {
-            // Remove existing notifications
-            const existingNotifications = document.querySelectorAll('.notification');
-            existingNotifications.forEach(n => n.remove());
-            
-            // Create notification element
-            const notification = document.createElement('div');
-            notification.className = `notification notification-${type}`;
-            notification.innerHTML = `
-                <div class="notification-content">
-                    <span class="notification-message">${message}</span>
-                    <button class="notification-close" onclick="this.parentElement.parentElement.remove()">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-            `;
-            
-            // Add to page
-            document.body.appendChild(notification);
-            
-            // Animate in
-            setTimeout(() => {
-                notification.style.transform = 'translateX(0)';
-            }, 100);
-            
-            // Auto remove
-            if (duration > 0) {
-                setTimeout(() => {
-                    notification.style.transform = 'translateX(100%)';
-                    setTimeout(() => {
-                        if (notification.parentElement) {
-                            notification.remove();
-                        }
-                    }, 300);
-                }, duration);
-            }
-        }
-
-        // Performance Monitoring
-        function initPerformanceMonitoring() {
-            // Page Load Time
-            window.addEventListener('load', function() {
-                setTimeout(() => {
-                    const perfData = performance.timing;
-                    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-                    
-                    trackEvent('page_performance', {
-                        load_time: pageLoadTime,
-                        dom_ready: perfData.domContentLoadedEventEnd - perfData.navigationStart
-                    });
-                }, 0);
-            });
-            
-            // Page Visibility
-            document.addEventListener('visibilitychange', function() {
-                trackEvent('page_visibility', {
-                    hidden: document.hidden,
-                    visibility_state: document.visibilityState
-                });
-            });
-        }
-
-        // Error Handling
-        function initErrorHandling() {
-            window.addEventListener('error', function(e) {
-                trackEvent('javascript_error', {
-                    message: e.message,
-                    filename: e.filename,
-                    line: e.lineno,
-                    column: e.colno
-                });
-                
-                console.error('JavaScript error:', e);
-            });
-        }
-
-        // Keyboard Navigation
-        function initKeyboardNavigation() {
-            document.addEventListener('keydown', function(e) {
-                // ESC key closes mobile menu
-                if (e.key === 'Escape') {
-                    const mobileMenu = document.querySelector('.mobile-menu');
-                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                        const menuButton = document.querySelector('.mobile-menu-button');
-                        if (menuButton) {
-                            const icon = menuButton.querySelector('i');
-                            if (icon) {
-                                icon.className = 'fas fa-bars text-xl';
-                            }
-                        }
-                    }
-                }
-                
-                // Enter key on buttons
-                if (e.key === 'Enter' && e.target.tagName === 'BUTTON') {
-                    e.target.click();
-                }
-            });
-        }
-
-        // Initialize everything when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('KiwiMag Logistic website initialized');
-            
-            // Initialize all modules
-            initSmoothScrolling();
-            initHeaderEffects();
-            initMobileMenu();
-            initScrollAnimations();
-            initLazyLoading();
-            initPerformanceMonitoring();
-            initErrorHandling();
-            initKeyboardNavigation();
-            
-            // Track page view
-            trackEvent('page_view', {
-                page_title: document.title,
-                page_location: window.location.href,
-                referrer: document.referrer
-            });
-            
-            // Add loading complete class
-            document.body.classList.add('loaded');
-            
-            console.log('All modules initialized successfully');
-        });
-
-        // Export functions for global access
-        window.KiwiMagLogistic = {
-            openWhatsApp,
-            openWhatsAppOrder,
-            openEmail,
-            trackEvent,
-            showNotification
-        };
-    </script>
+  emailjs.send('service_emplyer123', 'template_vsjvh1k', {
+    from_name: document.getElementById('j_name').value,
+    age: document.getElementById('j_age').value,
+    phone: document.getElementById('j_phone').value,
+    email: document.getElementById('j_email').value,
+    city: document.getElementById('j_city').value,
+    shifts: document.getElementById('j_shifts').value,
+    weekend: document.getElementById('j_weekend').value,
+    salary: document.getElementById('j_salary').value,
+    description: document.getElementById('j_description').value,
+    to_email: 'sdumitru@kiwimaglogistic.com'
+  }).then(() => {
+    document.getElementById('careersSuccess').style.display = 'block';
+    document.getElementById('careersError').style.display = 'none';
+    document.getElementById('careersForm').reset();
+    btn.textContent = 'Trimite Aplicația';
+    btn.disabled = false;
+    setTimeout(closeCareers, 3000);
+  }).catch(() => {
+    document.getElementById('careersError').style.display = 'block';
+    document.getElementById('careersSuccess').style.display = 'none';
+    btn.textContent = 'Trimite Aplicația';
+    btn.disabled = false;
+  });
+}
+</script>
 </body>
-
 </html>
 
 
